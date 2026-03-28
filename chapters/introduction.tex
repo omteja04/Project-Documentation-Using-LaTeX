@@ -8,11 +8,11 @@ The primary goal of the project is to enhance cybersecurity by enabling proactiv
 
 \section{Scope of the Project}
 
-The scope of \textbf{SafeSurf} involves designing and implementing an intelligent phishing detection framework capable of analyzing URLs and website infrastructure data in real time \cite{ref15, ref16, ref17}. The system integrates machine learning models, infrastructure analysis, and browser-based detection mechanisms to provide effective protection against phishing threats.
+The scope of \textbf{SafeSurf} involves designing and implementing an intelligent phishing detection framework capable of analyzing URLs and website infrastructure data in real time \cite{ref2, ref3, ref4}. The system integrates machine learning models, infrastructure analysis, and browser-based detection mechanisms to provide effective protection against phishing threats.
 The system consists of the following components:
 
 \begin{itemize}
-\item \textbf{Data Collection} -- Aggregation of phishing and legitimate URL datasets, primarily the PhiUSIIL dataset \cite{ref2}, from public sources for training and evaluation.
+\item \textbf{Data Collection} -- Aggregation of phishing and legitimate URL datasets, primarily the PhiUSIIL dataset \cite{ref5}, from public sources for training and evaluation.
 
 \item \textbf{Feature Extraction} -- Analysis of domain and infrastructure characteristics such as DNS records, SSL certificate information, domain registration details, URL structure, and HTML patterns.
 
@@ -27,7 +27,7 @@ The system is designed to support applications in \textbf{browser security tools
 
 \section{Current System}
 
-Existing phishing detection systems primarily rely on blacklist-based approaches, rule-based filters, or simple machine learning models to identify malicious websites \cite{ref3, ref6}. While these systems provide a basic level of protection, they often struggle to detect newly generated phishing websites and rapidly evolving attack techniques.
+Existing phishing detection systems primarily rely on blacklist-based approaches, rule-based filters, or simple machine learning models to identify malicious websites \cite{ref6, ref7, ref19, ref20, ref21}. While these systems provide a basic level of protection, they often struggle to detect newly generated phishing websites and rapidly evolving attack techniques.
 Many current approaches:
 
 \begin{itemize}
@@ -44,7 +44,7 @@ As phishing techniques become more sophisticated, traditional detection mechanis
 
 \section{Proposed System}
 
-The proposed system, \textbf{SafeSurf}, introduces an advanced phishing detection framework that combines infrastructure analysis with a machine learning ensemble approach to improve detection accuracy and reliability \cite{ref5}.
+The proposed system, \textbf{SafeSurf}, introduces an advanced phishing detection framework that combines infrastructure analysis with a machine learning ensemble approach to improve detection accuracy and reliability \cite{ref8}.
 
 The system implements a layered detection architecture beginning with a deterministic DNS Guard module that filters invalid domain lookups. This is followed by concurrent infrastructure data extraction using asynchronous processing to analyze DNS records, SSL certificates, and RDAP domain registration information.
 

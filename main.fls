@@ -369,6 +369,7 @@ INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\publi
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT .\images\logo.png
 INPUT .\images\logo.png
 INPUT .\images\logo.png
@@ -383,6 +384,8 @@ INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
@@ -540,7 +543,6 @@ INPUT .\images\nlp.png
 INPUT .\images\nlp.png
 INPUT .\images\nlp.png
 INPUT .\images\nlp.png
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT .\images\weighted-soft-voting.png
 INPUT .\images\weighted-soft-voting.png
@@ -745,6 +747,18 @@ INPUT chapters\bibliography.tex
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
+INPUT .\chapters\annexure.tex
+INPUT .\chapters\annexure.tex
+INPUT .\chapters\annexure.tex
+INPUT .\chapters\annexure.tex
+INPUT chapters\annexure.tex
+INPUT .\images\base-paper.png
+INPUT .\images\base-paper.png
+INPUT .\images\base-paper.png
+INPUT .\images\base-paper.png
+INPUT .\images\base-paper.png
+INPUT .\images\base-paper.png
+INPUT .\images\base-paper.png
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

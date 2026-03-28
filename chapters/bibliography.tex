@@ -1,5 +1,9 @@
-\clearpage
-\addcontentsline{toc}{chapter}{Bibliography}
+\chapter{Bibliography}
+\label{chap:bibliography}
+
+\begingroup
+\renewcommand{\clearpage}{} % Prevent bibliography from starting a new page
+\renewcommand{\chapter}[2]{}
 \bibliographystyle{IEEEtran}
-\nocite{*}
 \bibliography{references}
+\endgroup
