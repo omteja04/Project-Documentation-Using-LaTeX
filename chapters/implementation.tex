@@ -561,32 +561,6 @@ results = await asyncio.gather(
 \label{lst:concurrent_extraction}
 \end{listing}
 
-\subsection{Comprehensive DNS Signal Extraction}
-\noindent
-Structural markers like the quantity of IP addresses (A records), Name Servers (NS), and the existence of SPF/TXT records are extracted to build a technical profile of the domain's authority.
-
-\begin{listing}[htbp]
-\begin{minted}{python}
-async def _dns_info(domain: str) -> dict:
-    resolver = dns.resolver.Resolver()
-    resolver.lifetime = 4.0
-    try:
-        a_records   = resolver.resolve(domain, "A")
-        ns_records  = resolver.resolve(domain, "NS")
-        txt_records = resolver.resolve(domain, "TXT")
-        spf_present = int(any("spf" in str(r).lower() for r in txt_records))
-        return {
-            "qty_ip_resolved": len(a_records),
-            "qty_nameservers": len(ns_records),
-            "domain_spf":      spf_present
-        }
-    except Exception:
-        return {"qty_ip_resolved": -1, "qty_nameservers": -1, "domain_spf": 0}
-\end{minted}
-\caption{DNS Structural Signal Extraction Pipeline (deep\_feature\_extractor.py)}
-\label{lst:dns_extraction}
-\end{listing}
-
 \subsection{In-Memory Rolling TTL Caching}
 \noindent
 To optimize performance and respect external API limits, the system implements a rolling 5-minute cache. This uses epoch time buckets to automatically expire entries without overhead.
@@ -621,36 +595,32 @@ label = 1 if p_ensemble >= settings.PHISHING_THRESHOLD else 0
 \label{lst:ensemble_fusion}
 \end{listing}
 
-\subsection{Heuristic Suspicion Boosting}
+\subsection{Comprehensive DNS Signal Extraction}
 \noindent
-A rule-based heuristic layer applies deterministic "boosts" to probability scores for borderline URLs that exhibit high-risk patterns like direct IP addresses or excessive subdomain nesting.
+Structural markers like the quantity of IP addresses (A records), Name Servers (NS), and the existence of SPF/TXT records are extracted to build a technical profile of the domain's authority.
 
 \begin{listing}[htbp]
 \begin{minted}{python}
-def _heuristic_boost(url: str) -> tuple[float, list[str]]:
-    """Apply rule-based boosts for high-risk patterns."""
-    from urllib.parse import urlparse
-    import re
-    
-    boost = 0.0
-    reasons = []
-    domain = urlparse(url).netloc
-    
-    # Pattern: IP address usage instead of domain
-    if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", domain):
-        boost += 0.12
-        reasons.append("Direct IP Access")
-        
-    # Pattern: Excessive subdomains
-    if domain.count('.') > 4:
-        boost += 0.08
-        reasons.append("Deep Subdomain Nesting")
-        
-    return min(boost, 0.25), reasons
+async def _dns_info(domain: str) -> dict:
+    resolver = dns.resolver.Resolver()
+    resolver.lifetime = 4.0
+    try:
+        a_records   = resolver.resolve(domain, "A")
+        ns_records  = resolver.resolve(domain, "NS")
+        txt_records = resolver.resolve(domain, "TXT")
+        spf_present = int(any("spf" in str(r).lower() for r in txt_records))
+        return {
+            "qty_ip_resolved": len(a_records),
+            "qty_nameservers": len(ns_records),
+            "domain_spf":      spf_present
+        }
+    except Exception:
+        return {"qty_ip_resolved": -1, "qty_nameservers": -1, "domain_spf": 0}
 \end{minted}
-\caption{Heuristic Suspicion Boosting Logic (ensemble\_service.py)}
-\label{lst:heuristic_boosting}
+\caption{DNS Structural Signal Extraction Pipeline (deep\_feature\_extractor.py)}
+\label{lst:dns_extraction}
 \end{listing}
+
 
 \subsection{Production Drift Guard}
 \noindent
@@ -689,6 +659,7 @@ def check_domain_exists(domain: str) -> bool:
 \label{lst:dns_precheck}
 \end{listing}
 
+
 \subsection{Robust URL Normalization}
 \noindent
 Normalization ensures that functionally identical URLs—differing only by trailing slashes, case, or default ports—are mapped to a canonical form before feature extraction for prediction consistency.
@@ -710,26 +681,58 @@ def normalize_url(url: str) -> str:
 \label{lst:url_normalization}
 \end{listing}
 
-\subsection{SSL Handshake Validation}
+\subsection{Operational Health \& Readiness}
 \noindent
-Rather than checking for the HTTPS scheme alone, this module performs a live SSL handshake to verify that the certificate is properly signed and trusted by a standard root CA.
+Enables monitoring of the system's operational health, reporting specifically on whether the Machine Learning model binaries have been successfully deserialized and initialized in memory.
 
 \begin{listing}[htbp]
 \begin{minted}{python}
-async def _ssl_check(domain: str) -> int:
-    try:
-        ctx = ssl.create_default_context()
-        with socket.create_connection((domain, 443), timeout=4) as s:
-            with ctx.wrap_socket(s, server_hostname=domain):
-                return 1 # Trusted SSL
-    except ssl.SSLCertVerificationError:
-        return 0 # Untrusted/Self-signed SSL
-    except Exception:
-        return -1 # Connection Blocked
+@router.get("/health", response_model=HealthResponse)
+async def health_check(svc: EnsembleService = Depends(get_ensemble_service)):
+    # Verify model readiness in RAM
+    return HealthResponse(
+        status="healthy" if svc.is_loaded else "degraded",
+        model_loaded=svc.is_loaded,
+        app_env=settings.APP_ENV
+    )
 \end{minted}
-\caption{Live SSL Handshake Trust Verification (deep\_feature\_extractor.py)}
-\label{lst:ssl_validation}
+\caption{Service Health and Readiness Monitoring (predict.py)}
+\label{lst:health_check}
 \end{listing}
+
+
+
+\subsection{Heuristic Suspicion Boosting}
+\noindent
+A rule-based heuristic layer applies deterministic "boosts" to probability scores for borderline URLs that exhibit high-risk patterns like direct IP addresses or excessive subdomain nesting.
+
+\begin{listing}[htbp]
+\begin{minted}{python}
+def _heuristic_boost(url: str) -> tuple[float, list[str]]:
+    """Apply rule-based boosts for high-risk patterns."""
+    from urllib.parse import urlparse
+    import re
+    
+    boost = 0.0
+    reasons = []
+    domain = urlparse(url).netloc
+    
+    # Pattern: IP address usage instead of domain
+    if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", domain):
+        boost += 0.12
+        reasons.append("Direct IP Access")
+        
+    # Pattern: Excessive subdomains
+    if domain.count('.') > 4:
+        boost += 0.08
+        reasons.append("Deep Subdomain Nesting")
+        
+    return min(boost, 0.25), reasons
+\end{minted}
+\caption{Heuristic Suspicion Boosting Logic (ensemble\_service.py)}
+\label{lst:heuristic_boosting}
+\end{listing}
+
 
 \subsection{Primary Analysis API Endpoint}
 \noindent
@@ -750,23 +753,46 @@ async def analyze(
 \label{lst:api_analyze}
 \end{listing}
 
-\subsection{Operational Health \& Readiness}
+
+\subsection{SSL Handshake Validation}
 \noindent
-Enables monitoring of the system's operational health, reporting specifically on whether the Machine Learning model binaries have been successfully deserialized and initialized in memory.
+Rather than checking the HTTPS scheme alone, this module performs a live SSL handshake to verify that the certificate is properly signed and trusted by a standard root CA.
+\begin{listing}[htbp]
+\begin{minted}{python}
+async def _ssl_check(domain: str) -> int:
+    try:
+        ctx = ssl.create_default_context()
+        with socket.create_connection((domain, 443), timeout=4) as s:
+            with ctx.wrap_socket(s, server_hostname=domain):
+                return 1 # Trusted SSL
+    except ssl.SSLCertVerificationError:
+        return 0 # Untrusted/Self-signed SSL
+    except Exception:
+        return -1 # Connection Blocked
+\end{minted}
+\caption{Live SSL Handshake Trust Verification (deep\_feature\_extractor.py)}
+\label{lst:ssl_validation}
+\end{listing}
+
+
+
+\subsection{Centralized App Configuration}
+\noindent
+Implements a centralized, type-safe settings engine using Pydantic. This ensures that environment variables are validated and that critical model weights remain consistent across different deployment stages.
 
 \begin{listing}[htbp]
 \begin{minted}{python}
-@router.get("/health", response_model=HealthResponse)
-async def health_check(svc: EnsembleService = Depends(get_ensemble_service)):
-    # Verify model readiness in RAM
-    return HealthResponse(
-        status="healthy" if svc.is_loaded else "degraded",
-        model_loaded=svc.is_loaded,
-        app_env=settings.APP_ENV
-    )
+class Settings(BaseSettings):
+    """Application-wide configuration with .env validation."""
+    APP_NAME: str = "SafeSurf API"
+    ENSEMBLE_XGB_WEIGHT: float = 0.65
+    PHISHING_THRESHOLD: float = 0.5
+    
+    # Map .env file to settings object
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 \end{minted}
-\caption{Service Health and Readiness Monitoring (predict.py)}
-\label{lst:health_check}
+\caption{Centralized Pydantic Configuration System (config.py)}
+\label{lst:config_system}
 \end{listing}
 
 \subsection{Live Model Hot-Reloading}
@@ -788,6 +814,7 @@ async def reload_model(svc: EnsembleService = Depends(get_ensemble_service)):
 \label{lst:hot_reload}
 \end{listing}
 
+
 \subsection{WHOIS Age Calculation}
 \noindent
 Calculates the age of the domain in years or months by comparing its registration date with the current UTC time—a highly significant predictive feature in phishing detection.
@@ -806,23 +833,4 @@ def _calculate_domain_age(creation_date) -> Optional[str]:
 \end{minted}
 \caption{Domain Age Calculation from WHOIS Registry (whois\_service.py)}
 \label{lst:whois_age}
-\end{listing}
-
-\subsection{Centralized App Configuration}
-\noindent
-Implements a centralized, type-safe settings engine using Pydantic. This ensures that environment variables are validated and that critical model weights remain consistent across different deployment stages.
-
-\begin{listing}[htbp]
-\begin{minted}{python}
-class Settings(BaseSettings):
-    """Application-wide configuration with .env validation."""
-    APP_NAME: str = "SafeSurf API"
-    ENSEMBLE_XGB_WEIGHT: float = 0.65
-    PHISHING_THRESHOLD: float = 0.5
-    
-    # Map .env file to settings object
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
-\end{minted}
-\caption{Centralized Pydantic Configuration System (config.py)}
-\label{lst:config_system}
 \end{listing}
