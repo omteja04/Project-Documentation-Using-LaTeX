@@ -4,6 +4,12 @@ SafeSurf is a production-grade, infrastructure-aware Machine Learning system exp
 
 The core of SafeSurf combines a fast deterministic pre-check (DNS Guard) with a robust Multi-Model Voting Classifier Ensemble and Natural Language Processing (NLP). The architecture leverages 111 distinct features spanning lexical structure, domain age, SSL certificate details, and DNS infrastructure information to achieve a highly accurate detection capability (>97\% accuracy). Users interact with the system via a standalone Visual Security Dashboard and a real-time protective browser extension.
 \section{Use Cases \&  Actors}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/use-case-diagram.png}
+\caption{System Use Case Diagram}
+\label{fig:use_case}
+\end{figure}
 \subsection{Actors}
 \begin{enumerate}
     \item \textbf{End User / Web Surfer:} The primary consumer of the system. They browse the internet and rely on the SafeSurf system to protect them from malicious websites. They interact with the system primarily through the Chrome extension and the web dashboard.
@@ -16,15 +22,21 @@ The core of SafeSurf combines a fast deterministic pre-check (DNS Guard) with a 
 \begin{enumerate}
     \item \textbf{Analyze URL Safety:}
     An End User inputs a URL manually (or automatically via the extension). The system processes the URL and returns a definitive "safe", "phishing", or "invalid" verdict, mapping it to a risk level (LOW/MEDIUM/HIGH).
-    
-    \item \textbf{Automated Browser Protection:}
-    The Chrome Extension passively captures URLs visited by the End User, querying the API in the background. If a threshold is exceeded, it alerts or blocks the user from proceeding to the malicious site.
-    
+
     \item \textbf{Model Re-training \& Evaluation:}
     The System Analyst utilizes the three-phase data pipeline to extract features from a raw CSV dataset, retrain the multi-model ensemble, and hot-reload the .pkl files into the live detection server without downtime.
     
     \item \textbf{Metric Dashboarding:}
     The End User or Analyst logs onto the web interface to view the system's historical detection accuracy rate, precision metrics, and ROC-AUC visualizations directly extracted from the metrics.json file.
+    \item \textbf{Automated Browser Protection:}
+    The Chrome Extension passively captures URLs visited by the End User, querying the API in the background. If a threshold is exceeded, it alerts or blocks the user from proceeding to the malicious site.
+    
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./images/chrome-extension.png}
+    \caption{Chrome Extension Real-Time Workflow}
+    \label{fig:chrome_extension_flow}
+    \end{figure}
 \end{enumerate}
 
 \section{Algorithms Used}

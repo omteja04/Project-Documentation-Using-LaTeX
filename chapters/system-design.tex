@@ -2,24 +2,24 @@
 
 \section{Introduction to System Design}
 
-The SafeSurf system is designed as a \textbf{machine learning--based real-time phishing detection system} that integrates a modern web interface, browser extension, and a scalable backend architecture.
+The SafeSurf system is designed as a machine learning--based real-time phishing detection system that integrates a modern web interface, browser extension, and a scalable backend architecture.
 
-The system follows a \textbf{modular and layered design}, consisting of:
+The system follows a modular and layered design, consisting of:
 
 \begin{itemize}
-    \item \textbf{React-based frontend and Chrome extension} for user interaction
-    \item \textbf{FastAPI backend} for request handling and model execution \cite{ref20}
-    \item \textbf{Hybrid ensemble machine learning model} for phishing detection \cite{ref18}
+    \item React-based frontend and Chrome extension for user interaction
+    \item FastAPI backend for request handling and model execution \cite{ref20}
+    \item Hybrid ensemble machine learning model for phishing detection \cite{ref18}
 \end{itemize}
-
+\noindent
 Unlike traditional systems, SafeSurf incorporates:
 
 \begin{itemize}
-    \item \textbf{DNS Guard layer} for deterministic early filtering
-    \item \textbf{Asynchronous feature extraction} (111 infrastructure and lexical features)
-    \item \textbf{Hybrid ensemble} (VotingClassifier + NLP Text model)
+    \item DNS Guard layer for deterministic early filtering
+    \item Asynchronous feature extraction (111 infrastructure and lexical features)
+    \item Hybrid ensemble (VotingClassifier + NLP Text model)
 \end{itemize}
-
+\noindent
 This architecture ensures:
 
 \begin{itemize}
@@ -30,7 +30,7 @@ This architecture ensures:
 
 \section{System Architecture}
 
-The SafeSurf system is organized into \textbf{three major layers}:
+The SafeSurf system is organized into three major layers:
 
 \subsection{Client Layer}
 
@@ -70,6 +70,13 @@ The SafeSurf system is organized into \textbf{three major layers}:
 \label{fig:system-arch}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{./images/sequence-diagram.png}
+\caption{Dynamic Service Interaction Sequence}
+\label{fig:sequence_flow}
+\end{figure}
+
 \section{System Components}
 
 \subsection{URL Input \& Preprocessing}
@@ -90,7 +97,7 @@ The SafeSurf system is organized into \textbf{three major layers}:
 \subsection{DNS Guard Layer}
 
 \begin{itemize}
-    \item Acts as the \textbf{first deterministic security filter}
+    \item Acts as the first deterministic security filter
     \item Blocks:
     \begin{itemize}
         \item NXDOMAIN (Non-existent domains)
@@ -102,7 +109,7 @@ The SafeSurf system is organized into \textbf{three major layers}:
 \subsection{Feature Extraction Engine}
 
 \begin{itemize}
-    \item Extracts exactly \textbf{111 deep features}:
+    \item Extracts exactly 111 deep features:
     \begin{itemize}
         \item Lexical features (URL structure lengths, character counts, symbol frequencies)
         \item Infrastructure/Network features (WHOIS timing, DNS TTL/Records, SSL certificate validation)
@@ -193,7 +200,7 @@ The SafeSurf system is organized into \textbf{three major layers}:
 \section{Frontend \& UI Design}
 
 \begin{itemize}
-    \item Developed using \textbf{React.js}
+    \item Developed using React.js
     \item Provides:
     \begin{itemize}
         \item A simple, isolated URL input interface
@@ -227,6 +234,13 @@ The SafeSurf system is organized into \textbf{three major layers}:
     \item Combined directly at the application service layer via a hard-coded Weighted Soft-voting mechanism
 \end{itemize}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{./images/component-diagram.png}
+\caption{System Component Architecture}
+\label{fig:component_architecture}
+\end{figure}
+
 \section{Development Workflow}
 
 \begin{figure}[H]
@@ -250,8 +264,8 @@ The SafeSurf system is organized into \textbf{three major layers}:
 
 \section{Conclusion}
 \noindent
-The SafeSurf system design formally asserts a \textbf{scalable, highly efficient, and intelligent architecture} for modern phishing detection.
-
+The SafeSurf system design formally asserts a scalable, highly efficient, and intelligent architecture for modern phishing detection.
+\noindent
 By integrating:
 
 \begin{itemize}
@@ -259,7 +273,7 @@ By integrating:
     \item Hybrid machine learning ensemble fusions
     \item Real-time concurrent API processing
 \end{itemize}
-
+\noindent
 the system reliably ensures:
 
 \begin{itemize}

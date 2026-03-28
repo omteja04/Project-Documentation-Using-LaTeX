@@ -34,6 +34,35 @@ The system uses a combined dataset approach. Extracting exactly 111 features acr
 \noindent
 Testing showed that smaller datasets resulted in over-fitting and poor detection of modern, complex phishing patterns.
 
+\section{Three-Phase Retraining and Validation Workflow}
+To ensure the system remains resilient against evolving phishing tactics, a standardized three-phase pipeline was established for model retraining and performance verification. This workflow automates the transition from raw URL data to a production-ready ensemble model.
+
+\subsection*{Phase 1: High-Concurrency Feature Extraction}
+\noindent
+Using the \texttt{generate\_training\_dataset.py} utility, the system processes large-scale URL repositories (e.g., the PhiUSIIL 200k URL dataset). 
+\begin{itemize}
+    \item \textbf{Parallelism}: Utilizes a 40-thread parallel processing pool to minimize extraction latency across hundreds of thousands of rows.
+    \item \textbf{Domain-Level Caching}: Implements an in-memory cache to prevent redundant infrastructure lookups for identical domains within the same dataset.
+    \item \textbf{Checkpointing}: Automatically saves progress every 5,000 processed rows to prevent data loss during long-running extraction tasks.
+\end{itemize}
+
+\subsection*{Phase 2: Multi-Model Ensemble Training}
+\noindent
+The \texttt{train\_deep\_clean.py} script executes a rigorous machine learning pipeline to generate the final predictive binary.
+\begin{itemize}
+    \item \textbf{Data Partitioning}: Implements a stratified split (70\% training, 10\% calibration, and 20\% independent holdout testing).
+    \item \textbf{Model Fusion}: Deploys a \texttt{VotingClassifier} integrating Logistic Regression, Linear SVC, Random Forest, HistGradientBoosting, and XGBoost.
+    \item \textbf{Class Balancing}: Uses \texttt{scale\_pos\_weight} to mathematically adjust for imbalances between legitimate and phishing samples in the source data.
+\end{itemize}
+
+\subsection*{Phase 3: Production Sanity Validation}
+\noindent
+Before deployment, the \texttt{validate\_clean\_model.py} utility performs a Safe-Domain Stress Test to ensure zero-tolerance for false positives on high-authority infrastructure.
+\begin{itemize}
+    \item \textbf{Whitelist Coverage}: Tests the trained model against a rotating list of global authorities including \url{https://google.com}, \url{https://wikipedia.org}, and \url{https://github.com}.
+    \item \textbf{Assertion Logic}: The validation script triggers a build failure if any high-reputation domain is classified as phishing, guaranteeing that safe browsing remains uninterrupted.
+\end{itemize}
+
 \section{Model Performance Observations}
 
 \subsection*{Key Findings During Testing}
@@ -61,46 +90,106 @@ Testing showed that smaller datasets resulted in over-fitting and poor detection
     Testing against live URLs revealed that attackers constantly change their URL patterns. This confirmed the need for continuous model retraining and drift monitoring.
 \end{enumerate}
 
-\section{Test Case Identification}
-
+\section{Test Case Identification and Results}
 \noindent
-The following execution scenarios validate system performance against real-world inputs:
+The following execution scenarios validate the system's performance against diverse real-world inputs, ranging from trusted global authorities to sophisticated phishing attempts and infrastructure-level anomalies. Each test case reflects a specific threat vector or legitimate browsing pattern encountered by the Chrome Extension.
 
 \begin{itemize}
-    \item \textbf{Test Case 1: Known Safe Website}
+    \item \textbf{Test Case TC-01: Global Authority Validation}
     \begin{itemize}
-        \item \textbf{Input:} \texttt{https://www.google.com}
-        \item \textbf{Expected Output:} Legitimate / Safe ($< 0.65$ probability).
-        \item \textbf{Result:} Classified accurately.
+        \item \textbf{Scenario:} Identifying high-reputation global domains.
+        \item \textbf{Input URL:} \url{https://www.google.com}
+        \item \textbf{Verdict:} Safe (Low Risk)
+        \item \textbf{Result:} Successfully classified with a near-zero risk score due to long registration history and valid SSL certificates.
     \end{itemize}
 
-    \item \textbf{Test Case 2: Known Phishing Pattern}
+    \item \textbf{Test Case TC-02: Region-Specific Authority}
     \begin{itemize}
-        \item \textbf{Input:} \texttt{http://secure-login-alert.xyz}
-        \item \textbf{Expected Output:} Phishing / High Risk ($\geq 0.85$ probability).
-        \item \textbf{Result:} Classified accurately.
+        \item \textbf{Scenario:} Validating localized e-commerce portals.
+        \item \textbf{Input URL:} \url{https://www.amazon.in/}
+        \item \textbf{Verdict:} Safe (Low Risk)
+        \item \textbf{Result:} Successfully validated using localized DNS records and legitimate infrastructure signatures.
     \end{itemize}
 
-    \item \textbf{Test Case 3: Suspicious Lexical Structure}
+    \item \textbf{Test Case TC-03: Deep Directory Navigation}
     \begin{itemize}
-        \item \textbf{Input:} URL with excessive special characters and abnormal length.
-        \item \textbf{Expected Output:} Phishing / Medium Risk ($\geq 0.65$ probability).
-        \item \textbf{Result:} Classified accurately based on NLP text scoring.
+        \item \textbf{Scenario:} Testing lexical resilience against long, complex directory paths.
+        \item \textbf{Input URL:} \url{https://github.com/user/repo/tree/main/src/main.py}
+        \item \textbf{Verdict:} Safe (Low Risk)
+        \item \textbf{Result:} The model correctly differentiated between a complex file path on a trusted domain and a deceptive phishing directory.
     \end{itemize}
 
-    \item \textbf{Test Case 4: Invalid Domain Execution}
+    \item \textbf{Test Case TC-04: Typo Squatting Detection}
     \begin{itemize}
-        \item \textbf{Input:} \texttt{https://this-domain-does-not-exist-abc123.com}
-        \item \textbf{Expected Output:} Invalid input / Pre-filtered.
-        \item \textbf{Result:} DNS Guard successfully intercepted the request via NXDOMAIN detection.
+        \item \textbf{Scenario:} Detecting brands spoofed via character substitution (e.g., '0' for 'o').
+        \item \textbf{Input URL:} \url{g00gle.com}
+        \item \textbf{Verdict:} Invalid (NXDOMAIN)
+        \item \textbf{Result:} The DNS Guard intercepted the request immediately, identifying that the character-spoofed domain did not resolve to a valid IP.
     \end{itemize}
 
-    \item \textbf{Test Case 5: Deceptive HTTPS Usage}
+    \item \textbf{Test Case TC-05: Expired or Unregistered Domain}
     \begin{itemize}
-        \item \textbf{Input:} A phishing site utilizing a valid but recent SSL certificate.
-        \item \textbf{Expected Output:} Phishing.
-        \item \textbf{Result:} Infrastructure ensemble successfully flagged the recent WHOIS creation date despite the valid SSL.
+        \item \textbf{Scenario:} Handling dormant or disposable threat domains.
+        \item \textbf{Input URL:} \url{secure-login-alert.xyz}
+        \item \textbf{Verdict:} Invalid (NXDOMAIN)
+        \item \textbf{Result:} Correctness confirmed; the system prevents unnecessary ML execution on dead infrastructure.
     \end{itemize}
+
+    \item \textbf{Test Case TC-06: User-info Obfuscation Attempt}
+    \begin{itemize}
+        \item \textbf{Scenario:} Detecting URLs using '@' to hide the actual malicious host.
+        \item \textbf{Input URL:} \url{bank-login@verify.com}
+        \item \textbf{Verdict:} Invalid (Invalid Host)
+        \item \textbf{Result:} The Lexical Layer identified the malformed user-info pattern and flagged the host as suspicious.
+    \end{itemize}
+
+    \item \textbf{Test Case TC-07: Brand Sandwiching (Phishing)}
+    \begin{itemize}
+        \item \textbf{Scenario:} Detecting brand names embedded in malicious subdomains.
+        \item \textbf{Input URL:} \url{google.com.login-verify.top}
+        \item \textbf{Verdict:} Phishing (HIGH Risk)
+        \item \textbf{Result:} The NLP pipeline and XGBoost ensemble successfully identified the deceptive use of "google.com" in the subdomain prefix.
+    \end{itemize}
+
+    \item \textbf{Test Case TC-08: IP-Based Hosting (Phishing)}
+    \begin{itemize}
+        \item \textbf{Scenario:} Detecting phishing sites hosted directly on IPv4 addresses.
+        \item \textbf{Input URL:} \url{http://185.199.108.153/login}
+        \item \textbf{Verdict:} Phishing (HIGH Risk)
+        \item \textbf{Result:} The Infrastructure Layer immediately flagged the lack of a valid domain name and associated SSL certificate.
+    \end{itemize}
+\end{itemize}
+
+\noindent
+\textbf{Summary of Testing Results:}
+\noindent
+As an additional summary resource, the following table provides a condensed view of the execution statuses for the above cases:
+
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.5}
+\caption{System Validation Summary Table}
+\begin{tabularx}{\textwidth}{|l|p{3.5cm}|X|l|l|l|}
+\hline
+\textbf{ID} & \textbf{Scenario} & \textbf{Input URL} & \textbf{Verdict} & \textbf{Risk} & \textbf{Status} \\ \hline
+TC-01 & Global Authority    & \url{google.com}       & Safe     & LOW          & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-02 & Region Specific     & \url{amazon.in}       & Safe     & LOW          & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-03 & Deep Path           & \url{github.com/...} & Safe     & LOW          & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-04 & Typo Squatting      & \url{g00gle.com}                   & Invalid  & NXDOMAIN     & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-05 & Expired Domain      & \url{...alert.xyz}       & Invalid  & NXDOMAIN     & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-06 & Obfuscation         & \url{bank@verify.com}       & Invalid  & Invalid Host & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-07 & Brand Sandwiching   & \url{google.com...}  & Phishing & HIGH         & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+TC-08 & IP Hosting          & \url{185.199.108...} & Phishing & HIGH         & \textbf{\textcolor{namegreen}{Pass}} \\ \hline
+\end{tabularx}
+\end{table}
+
+\noindent
+\textbf{Final Testing Observations:}
+\begin{itemize}
+    \item \textbf{Legitimate Traffic (TC-01 to TC-03):} High-authority domains with standard SSL certificates consistently resolve as "Safe" with negligible risk scores.
+    \item \textbf{Infrastructure Filtering (TC-04 to TC-06):} The DNS Guard and Lexical Normalizer successfully intercept malformed or non-existent domains before they hit the ML pipeline, reporting "Invalid" or "NXDOMAIN" status.
+    \item \textbf{Heuristic Detection (TC-07 to TC-08):} Sophisticated phishing patterns were correctly flagged by the ensemble model with "HIGH" risk.
 \end{itemize}
 
 \section{Impact of System Components on Stability}

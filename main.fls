@@ -37,10 +37,6 @@ INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\title
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tocloft\tocloft.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tocloft\tocloft.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
@@ -69,17 +65,6 @@ INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstpatch.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstpatch.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstpatch.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
-INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\xurl\xurl.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\xurl\xurl.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
@@ -135,6 +120,209 @@ INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\enumi
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\cite\cite.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\cite\cite.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgfplots\pgfplots.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.revision.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-luatex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeyslibraryfiltered.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.base.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfint.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorerdf.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotscore.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\pgfplotslibrary.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryfpu.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\util\pgfplotsutil.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\liststructure\pgfplotsliststructure.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\liststructure\pgfplotsliststructureext.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\liststructure\pgfplotsarray.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\liststructure\pgfplotsmatrix.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\numtable\pgfplotstableshared.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\liststructure\pgfplotsdeque.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\util\pgfplotsbinary.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\util\pgfplotsbinary.data.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\util\pgfplotsutil.verb.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\pgflibrarypgfplots.surfshading.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\util\pgfplotscolormap.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\util\pgfplotscolor.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotsstackedplots.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotsplothandlers.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotsmeshplothandler.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotsmeshplotimage.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.scaling.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotscoordprocessing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.errorbars.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.markers.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplotsticks.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\pgfplots.paths.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmoduledecorations.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\tikzlibrarypgfplots.contourlua.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\tikzlibrarypgfplots.contourlua.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\tikzlibrarypgfplots.groupplots.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\tikzlibrarypgfplots.groupplots.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\tikzlibrarypgfplots.dateplot.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgfplots\libs\tikzlibrarypgfplots.dateplot.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfcalendar.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfcalendar.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfcalendar.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfcalendar.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfcalendar.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypatterns.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypatterns.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibrarypatterns.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibrarypatterns.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\minted\minted.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\minted\minted.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\catchfile\catchfile.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\generic\etexcmds\etexcmds.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\fvextra\fvextra.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\fvextra\fvextra.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\fancyvrb\fancyvrb.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\fancyvrb\fancyvrb.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\upquote\upquote.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\upquote\upquote.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\lineno\lineno.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\lineno\lineno.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\latex2pydata\latex2pydata.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\latex2pydata\latex2pydata.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgfopts\pgfopts.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\pgfopts\pgfopts.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\tools\shellesc.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\newfloat\newfloat.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\newfloat\newfloat.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ptm.fd
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ptm.fd
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ot1ptm.fd
@@ -266,6 +454,22 @@ INPUT .\initial_pages\abstract.tex
 INPUT .\initial_pages\abstract.tex
 INPUT .\initial_pages\abstract.tex
 INPUT initial_pages\abstract.tex
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+OUTPUT main.toc
+INPUT .\main.lof
+INPUT .\main.lof
+INPUT main.lof
+OUTPUT main.lof
+INPUT .\main.lot
+INPUT .\main.lot
+INPUT main.lot
+OUTPUT main.lot
 INPUT .\chapters\introduction.tex
 INPUT .\chapters\introduction.tex
 INPUT .\chapters\introduction.tex
@@ -298,23 +502,37 @@ INPUT .\chapters\system-analysis.tex
 INPUT .\chapters\system-analysis.tex
 INPUT .\chapters\system-analysis.tex
 INPUT chapters\system-analysis.tex
-INPUT .\images\dns.png
-INPUT .\images\dns.png
-INPUT .\images\dns.png
-INPUT .\images\dns.png
-INPUT .\images\dns.png
-INPUT .\images\dns.png
-INPUT .\images\dns.png
+INPUT .\images\use-case-diagram.png
+INPUT .\images\use-case-diagram.png
+INPUT .\images\use-case-diagram.png
+INPUT .\images\use-case-diagram.png
+INPUT .\images\use-case-diagram.png
+INPUT .\images\use-case-diagram.png
+INPUT .\images\use-case-diagram.png
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
-INPUT .\images\multi-model-voting.png
-INPUT .\images\multi-model-voting.png
-INPUT .\images\multi-model-voting.png
-INPUT .\images\multi-model-voting.png
-INPUT .\images\multi-model-voting.png
-INPUT .\images\multi-model-voting.png
-INPUT .\images\multi-model-voting.png
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT .\images\chrome-extension.png
+INPUT .\images\chrome-extension.png
+INPUT .\images\chrome-extension.png
+INPUT .\images\chrome-extension.png
+INPUT .\images\chrome-extension.png
+INPUT .\images\chrome-extension.png
+INPUT .\images\chrome-extension.png
+INPUT .\images\dns.png
+INPUT .\images\dns.png
+INPUT .\images\dns.png
+INPUT .\images\dns.png
+INPUT .\images\dns.png
+INPUT .\images\dns.png
+INPUT .\images\dns.png
+INPUT .\images\multi-model-voting.png
+INPUT .\images\multi-model-voting.png
+INPUT .\images\multi-model-voting.png
+INPUT .\images\multi-model-voting.png
+INPUT .\images\multi-model-voting.png
+INPUT .\images\multi-model-voting.png
+INPUT .\images\multi-model-voting.png
 INPUT .\images\nlp.png
 INPUT .\images\nlp.png
 INPUT .\images\nlp.png
@@ -349,6 +567,20 @@ INPUT .\images\system-architecture.png
 INPUT .\images\system-architecture.png
 INPUT .\images\system-architecture.png
 INPUT .\images\system-architecture.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\sequence-diagram.png
+INPUT .\images\component-diagram.png
+INPUT .\images\component-diagram.png
+INPUT .\images\component-diagram.png
+INPUT .\images\component-diagram.png
+INPUT .\images\component-diagram.png
+INPUT .\images\component-diagram.png
+INPUT .\images\component-diagram.png
 INPUT .\images\developmemt-workflow.png
 INPUT .\images\developmemt-workflow.png
 INPUT .\images\developmemt-workflow.png
@@ -356,6 +588,97 @@ INPUT .\images\developmemt-workflow.png
 INPUT .\images\developmemt-workflow.png
 INPUT .\images\developmemt-workflow.png
 INPUT .\images\developmemt-workflow.png
+INPUT .\chapters\implementation.tex
+INPUT .\chapters\implementation.tex
+INPUT .\chapters\implementation.tex
+INPUT .\chapters\implementation.tex
+INPUT chapters\implementation.tex
+INPUT .\images\project_structure_backend.png
+INPUT .\images\project_structure_backend.png
+INPUT .\images\project_structure_backend.png
+INPUT .\images\project_structure_backend.png
+INPUT .\images\project_structure_backend.png
+INPUT .\images\project_structure_backend.png
+INPUT .\images\project_structure_backend.png
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr7t.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pcr.fd
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pcr.fd
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pcr.fd
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8c.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmb7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8r.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8c.vf
+OUTPUT _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
+INPUT .\_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted
+INPUT .\_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted
+INPUT _FAD58DE7366495DB4650CFEFAC2FCD61.config.minted
+INPUT .\_minted\_FAD58DE7366495DB4650CFEFAC2FCD61.index.minted
+INPUT .\_minted\_FAD58DE7366495DB4650CFEFAC2FCD61.index.minted
+INPUT .\_minted\friendly.style.minted
+INPUT .\_minted\friendly.style.minted
+INPUT _minted\friendly.style.minted
+INPUT .\_minted\40823FA9E00DC06165065D2CB516E270.highlight.minted
+INPUT .\_minted\40823FA9E00DC06165065D2CB516E270.highlight.minted
+INPUT _minted\40823FA9E00DC06165065D2CB516E270.highlight.minted
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr7t.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrro7t.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrb7t.tfm
+INPUT .\_minted\EA67C06906C3BD12425A788A99A7CE02.highlight.minted
+INPUT .\_minted\EA67C06906C3BD12425A788A99A7CE02.highlight.minted
+INPUT _minted\EA67C06906C3BD12425A788A99A7CE02.highlight.minted
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr7t.tfm
+INPUT .\_minted\CB2C5FD09165E24D1DBF20902CFE34CD.highlight.minted
+INPUT .\_minted\CB2C5FD09165E24D1DBF20902CFE34CD.highlight.minted
+INPUT _minted\CB2C5FD09165E24D1DBF20902CFE34CD.highlight.minted
+INPUT .\_minted\2A2FBF0DD7BD6DEDC9CA47E44E25AFA5.highlight.minted
+INPUT .\_minted\2A2FBF0DD7BD6DEDC9CA47E44E25AFA5.highlight.minted
+INPUT _minted\2A2FBF0DD7BD6DEDC9CA47E44E25AFA5.highlight.minted
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrro7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrro8r.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8r.tfm
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrb7t.vf
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrb8r.tfm
+INPUT .\_minted\A92446F01C187D08648767680BC35054.highlight.minted
+INPUT .\_minted\A92446F01C187D08648767680BC35054.highlight.minted
+INPUT _minted\A92446F01C187D08648767680BC35054.highlight.minted
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8c.tfm
+INPUT .\_minted\1BA9CCEB25A98613B52348D3360B597E.highlight.minted
+INPUT .\_minted\1BA9CCEB25A98613B52348D3360B597E.highlight.minted
+INPUT _minted\1BA9CCEB25A98613B52348D3360B597E.highlight.minted
+INPUT .\_minted\89F8C12D01B4EEAAAA61F781D735362A.highlight.minted
+INPUT .\_minted\89F8C12D01B4EEAAAA61F781D735362A.highlight.minted
+INPUT _minted\89F8C12D01B4EEAAAA61F781D735362A.highlight.minted
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8c.vf
+INPUT .\_minted\E26A6EA642194D5D6D69FBDE9C5EBA2C.highlight.minted
+INPUT .\_minted\E26A6EA642194D5D6D69FBDE9C5EBA2C.highlight.minted
+INPUT _minted\E26A6EA642194D5D6D69FBDE9C5EBA2C.highlight.minted
+INPUT .\_minted\AC0FE581F2768402F189D4373300CF2F.highlight.minted
+INPUT .\_minted\AC0FE581F2768402F189D4373300CF2F.highlight.minted
+INPUT _minted\AC0FE581F2768402F189D4373300CF2F.highlight.minted
+INPUT .\_minted\4E7C159F131E2254B266F13EDFEDC5F7.highlight.minted
+INPUT .\_minted\4E7C159F131E2254B266F13EDFEDC5F7.highlight.minted
+INPUT _minted\4E7C159F131E2254B266F13EDFEDC5F7.highlight.minted
+INPUT .\_minted\5444FFBB756150087779CC91DE33629D.highlight.minted
+INPUT .\_minted\5444FFBB756150087779CC91DE33629D.highlight.minted
+INPUT _minted\5444FFBB756150087779CC91DE33629D.highlight.minted
+INPUT .\_minted\B499AD4E3B924945EE802AED17FB30C4.highlight.minted
+INPUT .\_minted\B499AD4E3B924945EE802AED17FB30C4.highlight.minted
+INPUT _minted\B499AD4E3B924945EE802AED17FB30C4.highlight.minted
+INPUT .\_minted\3F1162692239AD9C87F8A2488ABD4F43.highlight.minted
+INPUT .\_minted\3F1162692239AD9C87F8A2488ABD4F43.highlight.minted
+INPUT _minted\3F1162692239AD9C87F8A2488ABD4F43.highlight.minted
+INPUT .\_minted\6E146AF218FBFB39B99E475B7A0F7D7D.highlight.minted
+INPUT .\_minted\6E146AF218FBFB39B99E475B7A0F7D7D.highlight.minted
+INPUT _minted\6E146AF218FBFB39B99E475B7A0F7D7D.highlight.minted
 INPUT .\chapters\testing.tex
 INPUT .\chapters\testing.tex
 INPUT .\chapters\testing.tex
@@ -380,6 +703,20 @@ INPUT .\images\NXDOMAIN.png
 INPUT .\images\NXDOMAIN.png
 INPUT .\images\NXDOMAIN.png
 INPUT .\images\NXDOMAIN.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_legit_result.png
+INPUT .\images\user_phishing_result.png
+INPUT .\images\user_phishing_result.png
+INPUT .\images\user_phishing_result.png
+INPUT .\images\user_phishing_result.png
+INPUT .\images\user_phishing_result.png
+INPUT .\images\user_phishing_result.png
+INPUT .\images\user_phishing_result.png
 INPUT .\images\extension.png
 INPUT .\images\extension.png
 INPUT .\images\extension.png
@@ -405,17 +742,30 @@ INPUT .\chapters\bibliography.tex
 INPUT .\chapters\bibliography.tex
 INPUT .\chapters\bibliography.tex
 INPUT chapters\bibliography.tex
+INPUT .\main.bbl
+INPUT .\main.bbl
+INPUT main.bbl
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrb8a.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrb8a.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrr8a.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrr8a.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrro8a.pfb
+INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\courier\ucrro8a.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Users\OMTEJA YALLAPRAGADA\AppData\Local\Programs\MiKTeX\fonts\type1\urw\times\utmr8a.pfb

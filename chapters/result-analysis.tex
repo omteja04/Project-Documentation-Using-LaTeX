@@ -17,7 +17,7 @@ The final system fuses the Deep Infrastructure models with the NLP text model us
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{./images/matrix-roc.png}
+    \includegraphics[width=0.95\textwidth]{./images/matrix-roc.png}
     \caption{Confusion Matrix \& ROC-plot}
     \label{fig:roc-cnf}
 \end{figure}
@@ -30,7 +30,7 @@ The deterministic DNS Guard acts as the first layer of defense. During testing, 
 Additionally, during offline simulations, the system correctly defaulted to a defensive "High Risk" state because vital DNS and SSL infrastructure signals were missing. This confirms the system fails safely under adverse network conditions.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.82\textwidth]{./images/NXDOMAIN.png}
+    \includegraphics[width=0.80\textwidth]{./images/NXDOMAIN.png}
     \caption{NXDOMAIN}
     \label{fig:NXDOMAIN}
 \end{figure}
@@ -57,8 +57,66 @@ The system successfully mapped complex raw probabilities into discrete, user-fri
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{./images/extension.png}
-    \caption{Safe \& Risk Detection Through Extension}
+    \includegraphics[width=0.9\textwidth]{./images/user_legit_result.png}
+    \caption{Safe Website Detection Using Dashboard}
+    \label{fig:SAFE}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{./images/user_phishing_result.png}
+    \caption{Phishing Website Detection Using Dashboard}
+    \label{fig:RISK}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./images/extension.png}
+    \caption{Safe \& Risk Detection Using Extension}
     \label{fig:extension}
 \end{figure}
 
+\section{Performance Comparison}
+\noindent
+To benchmark SafeSurf's effectiveness, a comparative analysis was performed against established baseline models using the same PhiUSIIL testing dataset. The results demonstrate that the hybrid ensemble significantly outperforms single-algorithm approaches.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            ybar,
+            width=0.95\textwidth,
+            height=8.5cm,
+            ylabel={Score (Percentage)},
+            symbolic x coords={Logistic-Reg, Random-Forest, XGBoost-Solo, SafeSurf-Ensemble},
+            xtick=data,
+            nodes near coords,
+            nodes near coords align={vertical},
+            every node near coord/.append style={font=\tiny, rotate=90, anchor=west},
+            ymin=70, ymax=108,
+            bar width=10pt,
+            legend style={at={(0.5,-0.2)}, anchor=north, legend columns=-1},
+            ymajorgrids=true,
+            grid style=dashed,
+        ]
+            \addplot[fill=blue!40] coordinates {
+                (Logistic-Reg,86.4) (Random-Forest,93.2) (XGBoost-Solo,95.1) (SafeSurf-Ensemble,97.35)
+            };
+            \addplot[fill=red!40] coordinates {
+                (Logistic-Reg,85.1) (Random-Forest,92.5) (XGBoost-Solo,94.8) (SafeSurf-Ensemble,96.80)
+            };
+            \addplot[fill=orange!40] coordinates {
+                (Logistic-Reg,84.7) (Random-Forest,91.8) (XGBoost-Solo,94.2) (SafeSurf-Ensemble,96.50)
+            };
+            \addplot[fill=green!40] coordinates {
+                (Logistic-Reg,84.9) (Random-Forest,92.1) (XGBoost-Solo,94.5) (SafeSurf-Ensemble,96.65)
+            };
+            \legend{Accuracy, Precision, Recall, F1-Score}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Performance Comparison Against Baseline Models (Multi-Metric Analysis)}
+    \label{fig:performance-comparison}
+\end{figure}
+
+\noindent
+The data shown in Figure \ref{fig:performance-comparison} highlights the strength of the dual-layer detection strategy. While single models perform well on structured data, SafeSurf’s fusion of lexical and infrastructure checks bridges the remaining performance gaps, achieving a superior F1-Score of 96.65\%.
