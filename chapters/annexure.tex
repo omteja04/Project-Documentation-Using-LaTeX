@@ -1,11 +1,21 @@
-\chapter{Annexure}
-\label{chap:annexure}
+\clearpage
+
+% ---- Increment chapter + TOC entry ----
+\refstepcounter{chapter}
+\addcontentsline{toc}{chapter}{\thechapter \hspace{0.3em} Annexure}
+% ---- Chapter heading ----
+\begin{center}
+\bfseries\fontsize{16}{18}\selectfont
+\thechapter.\hspace{1em}\MakeUppercase{Annexure}
+\end{center}
+
+\vspace{20pt} % space after heading
 
 \section{Base Paper}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/base-paper.png}
-    \caption*{Architecture of the multimodal phishing detection system proposed by Vulfin et al. \cite{ref1}}
+    \includegraphics[width=0.85\textwidth]{images/base-paper.png}
+    \caption*{Architecture of the multimodal phishing detection system by Vulfin et al. \cite{ref1}}
     \label{fig:base_paper}
 \end{figure}
