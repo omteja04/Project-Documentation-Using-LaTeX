@@ -1,0 +1,22 @@
+\section{RELATED WORK}
+\label{sec:related_work}
+
+Phishing detection has traditionally evolved across three primary technical paradigms: blacklist-based, heuristic-based, and machine learning-based approaches \cite{ref1, ref11}. While each has contributed to the broader security landscape, they possess inherent structural limitations in the face of modern, rapidly mutating threats.
+
+\subsection{Traditional Paradigms}
+\textbf{Blacklist-based Approaches}: These are the most common defensive mechanisms, relying on curated databases of known malicious URLs (e.g., Google Safe Browsing and PhishTank) \cite{ref13}. While blacklists offer near-zero false-positive rates for reported sites, they are fundamentally reactive. Studies indicate that phishing domains often have a lifespan of less than 24 hours, frequently appearing and vanishing before they are indexed by blacklist providers, thus leaving a "zero-day" vulnerability window \cite{ref3}.
+
+\textbf{Heuristic-based Filters}: These systems use sets of predefined rules to identify suspicious patterns, such as typosquatting (e.g., "g00gle.com") or the use of subdomains to mimic legitimate organizations \cite{ref6}. However, heuristic rules are often static and can be easily bypassed by attackers who modify their URL structures or using unconventional top-level domains (TLDs).
+
+\textbf{Machine Learning (ML) Models}: Modern research has shifted toward ML-based classification, utilizing features like URL length, character distribution, and HTML content \cite{ref12}. While these systems offer better generalization than static rules, many implementations suffer from "feature fragility"—attackers can manipulate the URL string or HTML code to avoid detection without affecting the malicious functionality of the site.
+
+\subsection{Current Challenges}
+Many current approaches face the following challenges:
+\begin{itemize}
+    \item \textbf{High Latency}: Deep inspection techniques, such as rendering a page to analyze its DOM or visual layout, introduce significant latency, making them impractical for real-time browser-based protection.
+    \item \textbf{Single-Model Failure}: Relying on a single classifier (e.g., a standalone Random Forest or SVM) often leads to overfitting on specific datasets, reducing accuracy when exposed to diverse, real-world traffic.
+    \item \textbf{Lack of Infrastructure Context}: Most models focus exclusively on the URL string. They fail to evaluate the underlying hosting infrastructure—such as the registration age, name server reputation, and SSL certificate validity—which are much harder for attackers to spoof than the URL itself \cite{ref7, ref8}.
+\end{itemize}
+
+\subsection{The SafeSurf Approach}
+SafeSurf addresses these gaps by integrating real-time infrastructure data into a layered detection pipeline \cite{ref6, ref17}. By combining 111 deep lexical and infrastructure features within a weighted voting ensemble, the system achieves a robust classification that remains effective even when attackers attempt to obfuscate the URL string. This move toward infrastructure-aware detection represents a significant advancement over traditional URL-only methodologies.

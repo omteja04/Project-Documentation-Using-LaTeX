@@ -1,0 +1,73 @@
+\documentclass[a4paper, 10pt, conference]{ieeeconf}
+
+\IEEEoverridecommandlockouts
+\overrideIEEEmargins
+
+% ---------------- PACKAGES ----------------
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+\usepackage{microtype}     % improves spacing automatically
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% --- IEEE Compatible Hyperref ---
+\makeatletter
+\let\NAT@parse\undefined
+\makeatother
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+    breaklinks=true
+]{hyperref}
+% --------------------------------
+
+\title{\LARGE \bf
+SafeSurf: Real-Time Phishing Detection via Asynchronous Infrastructure Analysis and Ensemble Learning}
+
+\author{
+Alla Rajendra$^{1}$, 
+Yallapragada Omteja$^{2}$, 
+Karri Deepika$^{2}$, 
+Dangeti Sai Gayatri Vishwesh$^{2}$,\\ 
+and Ankit Roy Chowdhury$^{2}$
+\thanks{$^{1}$Assistant Professor, Department of Computer Science and Engineering, Aditya College of Engineering \& Technology (A), Surampalem, Andhra Pradesh, India}
+\thanks{$^{2}$Department of Computer Science and Engineering, Aditya College of Engineering \& Technology (A), Surampalem, Andhra Pradesh, India}
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+% ---------------- ABSTRACT ----------------
+\begin{abstract}
+\input{sections/abstract.tex}
+\end{abstract}
+
+\vspace{3pt}
+\noindent\textbf{\textit{Index Terms}---Phishing Detection, Machine Learning Ensemble, Infrastructure Analysis, Cybersecurity, Real-time Protection.}
+
+% ---------------- CONTENT ----------------
+\input{sections/intro.tex}
+\input{sections/related_work.tex}
+\input{sections/methodology.tex}
+\input{sections/results.tex}
+\input{sections/conclusion.tex}
+
+% ---------------- ACK ----------------
+\section*{ACKNOWLEDGMENT}
+The authors would like to acknowledge the support of Aditya College of Engineering \& Technology (A), Surampalem, for providing the necessary infrastructure and guidance for this research.
+
+% ---------------- REFERENCES ----------------
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

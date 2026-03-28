@@ -1,0 +1,17 @@
+\section{CONCLUSION}
+\label{sec:conclusion}
+
+The development and evaluation of \textbf{SafeSurf} demonstrate that integrating asynchronous infrastructure analysis with a multi-model ensemble approach significantly improves the robustness, accuracy, and speed of real-time phishing detection. By achieving a classification accuracy of \textbf{97.35\%} on the PhiUSIIL dataset \cite{ref10}, the framework effectively addresses the limitations of traditional static blacklists and single-model classifiers. The layered architecture—specifically the DNS Guard and the concurrent feature extraction pipeline—ensures that the system provides high-performance protection without compromising the user experience within a browser environment.
+
+This research underscores the importance of looking beyond the URL string and evaluating the underlying internet infrastructure. Features such as domain registration age, SSL certificate validity, and name server distribution provide critical context that is difficult for attackers to spoof, thereby enhancing the system's resistance to zero-day threats and sophisticated obfuscation techniques.
+
+% \subsection{Future Research Directions}
+% While SafeSurf provides a highly effective solution for current phishing threats, future work will focus on several key areas to further fortify web protection:
+% \begin{itemize}
+%     \item \textbf{Continuous Telemetry and Data-Drift Monitoring}: Implementing MLOps pipelines to monitor feature distributions in real-time, alerting administrators to distributional shifts that may indicate new attack patterns.
+%     \item \textbf{Multi-Modal Feature Expansion}: Integrating deep learning-based visual analysis of website components (e.g., logo spoofing detection) to catch visually deceptive sites that may otherwise pass lexical and infrastructure checks \cite{ref6}.
+%     \item \textbf{Cloud-Native Scaling}: Transitioning the FastAPI-based backend to a cloud-native, container-orchestrated environment (e.g., Kubernetes) to support global-scale deployment and handle massive concurrent traffic spikes \cite{ref21}.
+%     \item \textbf{Global Threat Intelligence Integration}: Fusing live data from diverse threat intelligence feeds into the ensemble to provide even more pervasive and proactive safety verdicts across varying geographical regions.
+% \end{itemize}
+
+SafeSurf represents a significant step toward a more proactive and intelligent approach to cybersecurity, providing end-users with a practical tool to navigate the modern web safely.

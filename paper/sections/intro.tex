@@ -1,0 +1,16 @@
+\section{INTRODUCTION}
+\label{sec:intro}
+
+Phishing remains a pervasive threat in the cybersecurity landscape, evolving from simple deceptive emails to sophisticated infrastructure-based attacks that bypass traditional security measures \cite{ref1}. Conventional detection mechanisms predominantly rely on static blacklists and rule-based filters. While these provide a baseline of protection, they inherently struggle to identify zero-day phishing domains and rapidly mutating attack vectors that have not yet been reported to centralized repositories \cite{ref11, ref13}. Furthermore, single-model machine learning approaches often fail to achieve the robustness required for diverse web environments, leading to higher false-positive rates and delayed response times in real-world scenarios.
+
+To address these challenges, we propose \textbf{SafeSurf}, a comprehensive real-time phishing detection framework that integrates deep infrastructure analysis with a multi-model ensemble learning approach \cite{ref12}. SafeSurf moves beyond URL-only analysis by extracting multi-dimensional features from DNS records, SSL certificates, and RDAP registration data through an asynchronous processing pipeline \cite{ref6, ref7, ref8}. The system introduces a modular and layered design, consisting of a React-based frontend, a high-performance FastAPI backend, and a specialized Chrome browser extension for pervasive user protection. 
+
+The primary contributions of this work include: 
+\begin{itemize}
+    \item \textbf{Layered Analysis Architecture}: A multi-stage detection pipeline beginning with a deterministic DNS Guard module for early filtering of invalid domains, followed by concurrent infrastructure data extraction.
+    \item \textbf{Hybrid Ensemble Fusion}: A sophisticated VotingClassifier ensemble—combining Logistic Regression, LinearSVC, Random Forest, HistGradientBoosting, and Calibrated XGBoost—specifically tuned for the PhiUSIIL dataset \cite{ref10} to provide superior generalization against zero-day threats.
+    \item \textbf{Asynchronous Feature Extraction}: An optimized extraction engine evaluating exactly 111 deep lexical and infrastructure features, utilizing non-blocking task loops to maintain sub-second response times in a browser environment.
+    \item \textbf{Practical Implementation}: A scalable full-stack ecosystem including a Chrome browser extension that provides instantaneous safety verdicts, ensuring minimal user interaction while maintaining real-time protection.
+\end{itemize}
+
+Experimental results demonstrate that \textbf{SafeSurf} significantly outperforms baseline single-model classifiers in both precision and recall, achieving an accuracy of \textbf{97.35\%}. This work provides a scalable solution for proactive web protection in modern enterprise and consumer environments.
