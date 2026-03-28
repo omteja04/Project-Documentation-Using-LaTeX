@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.26)  28 MAR 2026 11:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.26)  28 MAR 2026 11:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -796,7 +796,7 @@ Package newfloat Info: `float' package detected.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (initial_pages/title.tex
-<images/logo.png, id=437, 158.5122pt x 85.7604pt>
+<images/logo.png, id=441, 158.5122pt x 85.7604pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 38.
@@ -830,12 +830,12 @@ Overfull \hbox (61.84595pt too wide) in paragraph at lines 39--51
 ] (initial_pages/acknowledgement.tex) [4
 
 ] (initial_pages/pictures.tex
-<images/vision-mission-course.png, id=459, 412.4208pt x 566.115pt>
+<images/vision-mission-course.png, id=463, 412.4208pt x 566.115pt>
 File: images/vision-mission-course.png Graphic file (type png)
 <use images/vision-mission-course.png>
 Package pdftex.def Info: images/vision-mission-course.png  used on input line 3.
 (pdftex.def)             Requested size: 426.79135pt x 585.85191pt.
-<images/vison-mission-cse.png, id=460, 381.5856pt x 531.4254pt>
+<images/vison-mission-cse.png, id=464, 381.5856pt x 531.4254pt>
 File: images/vison-mission-cse.png Graphic file (type png)
 <use images/vison-mission-cse.png>
 Package pdftex.def Info: images/vison-mission-cse.png  used on input line 8.
@@ -843,19 +843,19 @@ Package pdftex.def Info: images/vison-mission-cse.png  used on input line 8.
  [5
 
  <./images/vision-mission-course.png>]
-<images/PEOs.png, id=467, 414.348pt x 577.6782pt>
+<images/PEOs.png, id=471, 414.348pt x 577.6782pt>
 File: images/PEOs.png Graphic file (type png)
 <use images/PEOs.png>
 Package pdftex.def Info: images/PEOs.png  used on input line 13.
 (pdftex.def)             Requested size: 426.79135pt x 595.024pt.
  [6 <./images/vison-mission-cse.png>]
-<images/PSO.png, id=474, 386.8854pt x 538.6524pt>
+<images/PSO.png, id=478, 386.8854pt x 538.6524pt>
 File: images/PSO.png Graphic file (type png)
 <use images/PSO.png>
 Package pdftex.def Info: images/PSO.png  used on input line 18.
 (pdftex.def)             Requested size: 426.79135pt x 594.22086pt.
  [7 <./images/PEOs.png>]
-<images/PO.png, id=482, 397.9668pt x 554.07pt>
+<images/PO.png, id=486, 397.9668pt x 554.07pt>
 File: images/PO.png Graphic file (type png)
 <use images/PO.png>
 Package pdftex.def Info: images/PO.png  used on input line 23.
@@ -937,7 +937,7 @@ Overfull \hbox (22.58035pt too wide) in paragraph at lines 164--165
 
 [8]) (chapters/system-analysis.tex [9]
 Chapter 3.
-<./images/use-case-diagram.png, id=734, 915.42pt x 1205.50375pt>
+<./images/use-case-diagram.png, id=738, 915.42pt x 1205.50375pt>
 File: ./images/use-case-diagram.png Graphic file (type png)
 <use ./images/use-case-diagram.png>
 Package pdftex.def Info: ./images/use-case-diagram.png  used on input line 9.
@@ -945,30 +945,30 @@ Package pdftex.def Info: ./images/use-case-diagram.png  used on input line 9.
 [10
 
 ] [11 <./images/use-case-diagram.png>]
-<./images/chrome-extension.png, id=750, 1543.7675pt x 2430.07875pt>
+<./images/chrome-extension.png, id=754, 1543.7675pt x 2430.07875pt>
 File: ./images/chrome-extension.png Graphic file (type png)
 <use ./images/chrome-extension.png>
 Package pdftex.def Info: ./images/chrome-extension.png  used on input line 36.
 (pdftex.def)             Requested size: 213.39568pt x 335.90742pt.
  [12]
-<./images/dns.png, id=762, 782.925pt x 874.26625pt>
+<./images/dns.png, id=766, 782.925pt x 874.26625pt>
 File: ./images/dns.png Graphic file (type png)
 <use ./images/dns.png>
 Package pdftex.def Info: ./images/dns.png  used on input line 51.
 (pdftex.def)             Requested size: 170.71393pt x 190.61827pt.
  [13 <./images/chrome-extension.png>]
-<./images/multi-model-voting.png, id=773, 1562.83875pt x 1087.06125pt>
+<./images/multi-model-voting.png, id=777, 1562.83875pt x 1087.06125pt>
 File: ./images/multi-model-voting.png Graphic file (type png)
 <use ./images/multi-model-voting.png>
 Package pdftex.def Info: ./images/multi-model-voting.png  used on input line 69.
 (pdftex.def)             Requested size: 277.41176pt x 192.95886pt.
  [14 <./images/dns.png>]
-<./images/nlp.png, id=780, 415.5525pt x 804.00375pt>
+<./images/nlp.png, id=784, 415.5525pt x 804.00375pt>
 File: ./images/nlp.png Graphic file (type png)
 <use ./images/nlp.png>
 Package pdftex.def Info: ./images/nlp.png  used on input line 81.
 (pdftex.def)             Requested size: 85.35696pt x 165.14081pt.
-<./images/weighted-soft-voting.png, id=781, 1085.05376pt x 1363.0925pt>
+<./images/weighted-soft-voting.png, id=785, 1085.05376pt x 1363.0925pt>
 File: ./images/weighted-soft-voting.png Graphic file (type png)
 <use ./images/weighted-soft-voting.png>
 Package pdftex.def Info: ./images/weighted-soft-voting.png  used on input line 94.
@@ -976,7 +976,7 @@ Package pdftex.def Info: ./images/weighted-soft-voting.png  used on input line 9
  [15 <./images/multi-model-voting.png> <./images/nlp.png>]
 
 pdfTeX warning: pdflatex (file ./images/flowchart.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./images/flowchart.pdf, id=791, 614.295pt x 794.97pt>
+<./images/flowchart.pdf, id=795, 614.295pt x 794.97pt>
 File: ./images/flowchart.pdf Graphic file (type pdf)
 <use ./images/flowchart.pdf>
 Package pdftex.def Info: ./images/flowchart.pdf  used on input line 103.
@@ -986,12 +986,12 @@ Chapter 4.
 [18
 
 ]
-<./images/system-architecture.png, id=809, 2762.32pt x 1541.76pt>
+<./images/system-architecture.png, id=813, 2762.32pt x 1541.76pt>
 File: ./images/system-architecture.png Graphic file (type png)
 <use ./images/system-architecture.png>
 Package pdftex.def Info: ./images/system-architecture.png  used on input line 68.
 (pdftex.def)             Requested size: 349.97203pt x 195.33084pt.
-<./images/sequence-diagram.png, id=810, 1839.87375pt x 1113.15875pt>
+<./images/sequence-diagram.png, id=814, 1839.87375pt x 1113.15875pt>
 File: ./images/sequence-diagram.png Graphic file (type png)
 <use ./images/sequence-diagram.png>
 Package pdftex.def Info: ./images/sequence-diagram.png  used on input line 75.
@@ -1007,13 +1007,13 @@ Overfull \hbox (1.56737pt too wide) in paragraph at lines 115--116
  []
 
 [21] [22]
-<./images/component-diagram.png, id=835, 1190.4475pt x 914.41624pt>
+<./images/component-diagram.png, id=839, 1190.4475pt x 914.41624pt>
 File: ./images/component-diagram.png Graphic file (type png)
 <use ./images/component-diagram.png>
 Package pdftex.def Info: ./images/component-diagram.png  used on input line 239.
 (pdftex.def)             Requested size: 362.77525pt x 278.65237pt.
  [23]
-<./images/developmemt-workflow.png, id=840, 2071.74pt x 436.63126pt>
+<./images/developmemt-workflow.png, id=844, 2071.74pt x 436.63126pt>
 File: ./images/developmemt-workflow.png Graphic file (type png)
 <use ./images/developmemt-workflow.png>
 Package pdftex.def Info: ./images/developmemt-workflow.png  used on input line 248.
@@ -1030,7 +1030,7 @@ Overfull \hbox (0.15323pt too wide) in paragraph at lines 2--3
 \OT1/ptm/m/n/12 based back-end, a mod-ern fron-tend built with Re-act and Tail-wind CSS, a ded-i-cated Chrome
  []
 
-<./images/project_structure_backend.png, id=860, 768.62157pt x 502.12593pt>
+<./images/project_structure_backend.png, id=864, 768.62157pt x 502.12593pt>
 File: ./images/project_structure_backend.png Graphic file (type png)
 <use ./images/project_structure_backend.png>
 Package pdftex.def Info: ./images/project_structure_backend.png  used on input line 11.
@@ -1259,10 +1259,10 @@ Overfull \hbox (3.03227pt too wide) in paragraph at lines 545--547
 \pydata@fh@0=\write9
 \openout9 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260328112615 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
+runsystem(latexminted config  --timestamp 20260328115430 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
 
 (_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260328112615 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20260328115430 FAD58DE7366495DB4650CFEFAC2FCD61)...executed.
 
  (_minted/friendly.style.minted) (_minted/40823FA9E00DC06165065D2CB516E270.highlight.minted
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
@@ -1285,7 +1285,7 @@ Overfull \hbox (10.3504pt too wide) in paragraph at lines 5--6
 []\OT1/ptm/m/n/12 The re-sult anal-y-sis phase eval-u-ates the per-for-mance and ef-fec-tive-ness of the SafeSurf
  []
 
-<./images/matrix-roc.png, id=1119, 2548.52126pt x 958.58125pt>
+<./images/matrix-roc.png, id=1123, 2548.52126pt x 958.58125pt>
 File: ./images/matrix-roc.png Graphic file (type png)
 <use ./images/matrix-roc.png>
 Package pdftex.def Info: ./images/matrix-roc.png  used on input line 20.
@@ -1293,24 +1293,24 @@ Package pdftex.def Info: ./images/matrix-roc.png  used on input line 20.
 [63
 
 ]
-<./images/NXDOMAIN.png, id=1124, 440.847pt x 308.95425pt>
+<./images/NXDOMAIN.png, id=1128, 440.847pt x 308.95425pt>
 File: ./images/NXDOMAIN.png Graphic file (type png)
 <use ./images/NXDOMAIN.png>
 Package pdftex.def Info: ./images/NXDOMAIN.png  used on input line 33.
 (pdftex.def)             Requested size: 341.43437pt x 239.2815pt.
  [64 <./images/matrix-roc.png> <./images/NXDOMAIN.png>]
-<./images/user_legit_result.png, id=1136, 486.01575pt x 341.47575pt>
+<./images/user_legit_result.png, id=1140, 486.01575pt x 341.47575pt>
 File: ./images/user_legit_result.png Graphic file (type png)
 <use ./images/user_legit_result.png>
 Package pdftex.def Info: ./images/user_legit_result.png  used on input line 60.
 (pdftex.def)             Requested size: 384.1096pt x 269.88272pt.
  [65]
-<./images/user_phishing_result.png, id=1143, 446.8695pt x 308.95425pt>
+<./images/user_phishing_result.png, id=1147, 446.8695pt x 308.95425pt>
 File: ./images/user_phishing_result.png Graphic file (type png)
 <use ./images/user_phishing_result.png>
 Package pdftex.def Info: ./images/user_phishing_result.png  used on input line 67.
 (pdftex.def)             Requested size: 384.1096pt x 265.5776pt.
-<./images/extension.png, id=1144, 2011.515pt x 1330.9725pt>
+<./images/extension.png, id=1148, 2011.515pt x 1330.9725pt>
 File: ./images/extension.png Graphic file (type png)
 <use ./images/extension.png>
 Package pdftex.def Info: ./images/extension.png  used on input line 74.
@@ -1334,20 +1334,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0818F3B76C6981567B85A523B695DC35;21740.
+(rerunfilecheck)             Checksum: D2FC65FBF20034B5F92C62A56D732A98;21832.
  ) 
 Here is how much of TeX's memory you used:
- 39994 strings out of 467867
- 968494 string characters out of 5411522
+ 39995 strings out of 467867
+ 968512 string characters out of 5411522
  1559539 words of memory out of 5000000
- 67860 multiletter control sequences out of 15000+600000
+ 67861 multiletter control sequences out of 15000+600000
  656853 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,19n,108p,1112b,2329s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/OMTEJA YALLAPRAGADA/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (87 pages, 12328737 bytes).
+Output written on main.pdf (87 pages, 12329254 bytes).
 PDF statistics:
- 1338 PDF objects out of 1440 (max. 8388607)
+ 1342 PDF objects out of 1440 (max. 8388607)
  310 named destinations out of 1000 (max. 500000)
- 992 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1000 words of extra memory for PDF output out of 10000 (max. 10000000)
 
