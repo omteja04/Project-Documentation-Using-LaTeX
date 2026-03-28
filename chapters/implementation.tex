@@ -18,10 +18,10 @@ To develop the Optimized Phishing Website Detector, various technologies and sof
 \noindent
 \textbf{Backend: FastAPI \& Python}
 \begin{itemize}
-\item \textbf{FastAPI}: A high-performance, lightweight web framework \cite{ref20} used to create fast, scalable REST APIs for real-time model execution and URL analysis.
+\item \textbf{FastAPI}: A high-performance, lightweight web framework \cite{ref10} used to create fast, scalable REST APIs for real-time model execution and URL analysis.
 \item \textbf{Python Libraries}:
 \begin{itemize}
-\item \textbf{XGBoost \& Scikit-learn}: Implementing the core ensemble model architecture, including the gradient boosting framework and NLP-based Logistic Regression \cite{ref7, ref18, ref19}.
+\item \textbf{XGBoost \& Scikit-learn}: Implementing the core ensemble model architecture, including the gradient boosting framework and NLP-based Logistic Regression \cite{ref12, ref11, ref13}.
 \item \textbf{NumPy, Pandas}: Handling data preprocessing, feature extraction, and extensive dataset manipulation.
 \item \textbf{Joblib}: Model serialization for efficient loading and inference in the production environment.
 \item \textbf{Requests/BeautifulSoup}: Facilitating external API calls to PhishTank and handling domain/content resolution heuristics.
@@ -31,8 +31,8 @@ To develop the Optimized Phishing Website Detector, various technologies and sof
 \noindent
 \textbf{Frontend \& Client: React, Tailwind CSS, JavaScript}
 \begin{itemize}
-\item \textbf{Web Dashboard}: A dynamic user interface designed using React \cite{ref22}, Vite, and Tailwind CSS for robust user interaction. It allows users to manually analyze URLs, view comprehensive risk metrics, and examine feature-level threat breakdowns.
-\item \textbf{Chrome Extension}: A custom browser extension built with JavaScript/HTML/CSS that seamlessly interacts with the FastAPI backend to display real-time pop-up notifications when a phishing site is detected \cite{ref23}.
+\item \textbf{Web Dashboard}: A dynamic user interface designed using React \cite{ref9}, Vite, and Tailwind CSS \cite{ref22} for robust user interaction. It allows users to manually analyze URLs, view comprehensive risk metrics, and examine feature-level threat breakdowns.
+\item \textbf{Chrome Extension}: A custom browser extension built with JavaScript/HTML/CSS that seamlessly interacts with the FastAPI backend to display real-time pop-up notifications when a phishing site is detected \cite{ref15}.
 \item \textbf{Jupyter Notebook}: For research purposes, all initial model training, dataset evaluations, and metric generation were conducted within notebooks.
 \end{itemize}
 \noindent
@@ -115,7 +115,7 @@ To develop the Optimized Phishing Website Detector, various technologies and sof
 
 \section{Dataset Description}
 
-The Phishing Website detection dataset leverages the extensively structured \\ \texttt{PhiUSIIL\_Phishing\_URL\_Dataset} \cite{ref2} and \texttt{dataset\_full.csv}, seamlessly processed into a highly optimized 111-feature continuous numeric vector alongside a dedicated Natural Language Processing (NLP) text tokenization pipeline. To guarantee execution efficiency for the browser Chrome Extension, the backend feature extraction logic was exclusively divided into two architectural processing tiers: \textbf{Layer A (Pure Lexical)} and \textbf{Layer B (Asynchronous Infrastructure)}. This dual-layer architecture guarantees absolute algorithmic precision for the XGBoost and Logistic Regression models while efficiently keeping real-time inference latency under strict, sub-second thresholds.
+The Phishing Website detection dataset leverages the extensively structured \\ \texttt{PhiUSIIL\_Phishing\_URL\_Dataset} \cite{ref5} and \texttt{dataset\_full.csv}, seamlessly processed into a highly optimized 111-feature continuous numeric vector alongside a dedicated Natural Language Processing (NLP) text tokenization pipeline. To guarantee execution efficiency for the browser Chrome Extension, the backend feature extraction logic was exclusively divided into two architectural processing tiers: \textbf{Layer A (Pure Lexical)} and \textbf{Layer B (Asynchronous Infrastructure)}. This dual-layer architecture guarantees absolute algorithmic precision for the XGBoost and Logistic Regression models while efficiently keeping real-time inference latency under strict, sub-second thresholds.
 
 \subsection{Dataset Overview}
 
@@ -252,7 +252,7 @@ Tailwind CSS is a highly popular, utility-first CSS framework that orchestrates 
 
 \subsection{Docker -- Containerization and Deployment Introduction to Docker}
 \noindent
-Docker is a powerful containerization platform \cite{ref21} that allows developers to package applications alongside their specific dependencies, libraries, and environmental configurations into standardized executable units called containers.
+Docker is a powerful containerization platform \cite{ref14} that allows developers to package applications alongside their specific dependencies, libraries, and environmental configurations into standardized executable units called containers.
 \noindent
 \textbf{Why Docker Was Used?}
 
