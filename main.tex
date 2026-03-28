@@ -24,10 +24,8 @@
 \usepgfplotslibrary{groupplots,dateplot}
 \usetikzlibrary{patterns,shapes.geometric}
 
-% Rename TOC
+% ---------------- TOC ----------------
 \renewcommand{\contentsname}{INDEX}
-
-% Remove dots everywhere
 \renewcommand{\cftdotsep}{10000}
 
 % ---------------- COLORS ----------------
@@ -41,10 +39,9 @@
 \usepackage{newfloat}
 \usepackage{caption}
 
-% listing environment is already defined by minted
-
+% SINGLE SPACING for captions
 \captionsetup{
-    font=small,
+    font={small,stretch=1},
     labelfont=bf
 }
 
@@ -52,7 +49,7 @@
 \renewcommand{\listoflistingscaption}{List of Code blocks}
 
 \captionsetup[listing]{
-    font=small,
+    font={small,stretch=1},
     labelfont=bf
 }
 
@@ -66,7 +63,6 @@
 
 % ---------------- MINTED SETTINGS ----------------
 \usemintedstyle{friendly}
-
 \definecolor{codebg}{RGB}{245,245,245}
 
 \setminted{
@@ -81,8 +77,8 @@
 \onehalfspacing
 \setlength{\parindent}{1.25cm}
 
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{4}   % allow deeper levels
+\setcounter{tocdepth}{4}
 
 % ---------------- PAGE STYLE ----------------
 \pagestyle{fancy}
@@ -107,15 +103,33 @@
 {\bfseries\fontsize{14}{16}\selectfont}
 {\thesection}{1em}{}
 
+% ---------------- SUBSECTION ----------------
 \titleformat{\subsection}
 {\bfseries\fontsize{12}{14}\selectfont}
 {\thesubsection}{1em}{}
+
+% ---------------- SUBSUBSECTION ----------------
+\titleformat{\subsubsection}
+{\bfseries\fontsize{12}{14}\selectfont}
+{\thesubsubsection}{1em}{}
+
+% ---------------- SUBSUBSUBSECTION ----------------
+\titleformat{\paragraph}
+{\bfseries\fontsize{12}{14}\selectfont}
+{\theparagraph}{1em}{}
+
+\titlespacing*{\paragraph}{0pt}{6pt}{6pt}
+
+% Numbered (if needed)
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+
+% Unnumbered (NO TOC)
+\newcommand{\subsubsubsectionstar}[1]{\paragraph*{#1}}
 
 % ---------------- NUMBERING ----------------
 \numberwithin{figure}{chapter}
 \numberwithin{table}{chapter}
 \numberwithin{listing}{chapter}
-\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
 
 % ==================================================
 \begin{document}
@@ -140,7 +154,10 @@
 \input{initial_pages/pictures}
 \clearpage
 
+% Abstract should be single spaced
+\begin{singlespace}
 \input{initial_pages/abstract}
+\end{singlespace}
 \clearpage
 
 \tableofcontents
@@ -151,9 +168,6 @@
 
 \listoftables
 \clearpage
-
-% \listoflistings
-% \clearpage
 
 % ---------------- MAIN CONTENT ----------------
 \pagenumbering{arabic}
@@ -168,7 +182,12 @@
 \input{chapters/result-analysis}
 \input{chapters/conclusion}
 \input{chapters/future-scope}
+
+% References single spaced
+\begin{singlespace}
 \input{chapters/bibliography}
+\end{singlespace}
+
 \input{chapters/annexure}
 
 \end{document}
