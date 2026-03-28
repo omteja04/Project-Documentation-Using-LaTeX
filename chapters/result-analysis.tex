@@ -41,7 +41,7 @@ Extracting exactly 111 structural features per URL usually requires significant 
 
 \subsection{Hybrid Ensemble Effectiveness}
 \noindent
-Training individual mathematical algorithms separately showed that single models often struggled with highly deceptive URLs. By combining five distinct models (Logistic Regression, Linear Support Vector Machine, Random Forest, Histogram Gradient Boosting, and XGBoost \cite{ref9, ref13}) into a single VotingClassifier ensemble, the system effectively neutralized isolated false positives from any one algorithm. 
+Training individual mathematical algorithms separately showed that single models often struggled with highly deceptive URLs. By combining five distinct models (Logistic Regression, Linear Support Vector Machine, Random Forest, Histogram Gradient Boosting, and XGBoost \cite{ref7, ref9, ref13}) into a single VotingClassifier ensemble \cite{ref18}, the system effectively neutralized isolated false positives from any one algorithm. 
 
 Furthermore, the addition of the independent NLP Bag-of-Words model ensured that visually deceptive links (e.g., typosquatting) were caught, even if the attacking domain was recently registered and possessed a valid SSL certificate.
 

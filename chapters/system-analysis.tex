@@ -12,7 +12,7 @@ The core of SafeSurf combines a fast deterministic pre-check (DNS Guard) with a 
 \end{figure}
 \subsection{Actors}
 \begin{enumerate}
-    \item \textbf{End User / Web Surfer:} The primary consumer of the system. They browse the internet and rely on the SafeSurf system to protect them from malicious websites. They interact with the system primarily through the Chrome extension and the web dashboard.
+    \item \textbf{End User / Web Surfer:} The primary consumer of the system. They browse the internet and rely on the SafeSurf system to protect them from malicious websites. They interact with the system primarily through the Chrome extension and the web dashboard \cite{ref23}.
     \item \textbf{System Administrator / Security Analyst}: Responsible for managing the deployed application, monitoring real-time performance metrics via the dashboard, configuring .env thresholds, and actively re-training the ML models with updated datasets.
     \item \textbf{SafeSurf API (System Actor):} The FastAPI backend system that processes incoming requests, orchestrates the layered detection pipeline, interfaces with the ML models, and returns unified JSON risk analysis responses \cite{ref20}.
     \item \textbf{External Infrastructure (System Actors):} Third-party services, including DNS Resolvers, WHOIS registry databases, and SSL authorities. The system queries these actors to accumulate infrastructure footprint data for a given URL.
@@ -55,7 +55,7 @@ A pre-check algorithm ensuring the URL actually exists. It attempts to resolve t
 
 \subsection{Multi-Model Voting Classifier Ensemble}
 \noindent
-A robust ensemble algorithm utilized for scikit-learn compatibility and overall generalization \cite{ref18}. It analyzes 111 deep structural features (character counts, DNS TTL, SSL properties, WHOIS timing). The Voting Classifier internally aggregates predictions from:
+A robust ensemble algorithm utilized for scikit-learn compatibility and overall generalization \cite{ref18}. It analyzes 111 deep structural features (character counts, DNS TTL, SSL properties, WHOIS timing) derived from comprehensive phishing datasets \cite{ref2}. The Voting Classifier internally aggregates predictions from:
 \begin{itemize}
     \item Logistic Regression
     \item Linear Support Vector Classifier (LinearSVC)
@@ -73,7 +73,7 @@ A robust ensemble algorithm utilized for scikit-learn compatibility and overall 
 
 \subsection{Natural Language Processing - Bag of Words}
 \noindent
-An algorithm focusing solely on the lexical shape and text strings within the URL. It utilizes a CountVectorizer to generate token arrays and scores the visual characteristics using a LogisticRegression model.
+An algorithm focusing solely on the lexical shape and text strings within the URL. It utilizes a CountVectorizer \cite{ref18} to generate token arrays and scores the visual characteristics using a LogisticRegression model.
 
 
 \begin{figure}[H]
