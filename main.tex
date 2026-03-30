@@ -25,7 +25,10 @@
 \usetikzlibrary{patterns,shapes.geometric}
 
 % ---------------- TOC ----------------
-\renewcommand{\contentsname}{INDEX}
+% ---------------- LISTS FORMATTING ----------------
+\renewcommand{\contentsname}{Index}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
 \renewcommand{\cftdotsep}{10000}
 
 % ---------------- COLORS ----------------
@@ -35,18 +38,37 @@
 \definecolor{textblue}{RGB}{0,0,100}
 
 % ---------------- CODE LISTINGS ----------------
-\usepackage{minted}
+\usepackage[newfloat]{minted}
 \usepackage{newfloat}
 \usepackage{caption}
+\usepackage{textcase}
+\usepackage{etoolbox}
 
-% SINGLE SPACING for captions
+% Define listing float properly
+\SetupFloatingEnvironment{listing}{
+    fileext=lol,
+    listname={List of Code Blocks},
+    name={Code Block}
+}
+
+% Ensure the list titles are consistently formatted
+\makeatletter
+\@ifundefined{listoflistingscaption}{\newcommand{\listoflistingscaption}{LIST OF CODE BLOCKS}}{}
+\renewcommand{\listoflistingscaption}{LIST OF CODE BLOCKS}
+
+% Fix List Titles (Centering + Font Size)
+\patchcmd{\tableofcontents}{\chapter*{\contentsname}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \contentsname}}{}{}
+\patchcmd{\listoffigures}{\chapter*{\listfigurename}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \listfigurename}}{}{}
+\patchcmd{\listoftables}{\chapter*{\listtablename}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \listtablename}}{}{}
+\patchcmd{\listoflistings}{\chapter*{\listoflistingscaption}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \listoflistingscaption}}{}{}
+\makeatother
+
+
+% Caption styling
 \captionsetup{
     font={small,stretch=1},
     labelfont=bf
 }
-
-\renewcommand{\listingscaption}{Code block}
-\renewcommand{\listoflistingscaption}{List of Code blocks}
 
 \captionsetup[listing]{
     font={small,stretch=1},
@@ -167,6 +189,9 @@
 \clearpage
 
 \listoftables
+\clearpage
+
+\listoflistings
 \clearpage
 
 % ---------------- MAIN CONTENT ----------------

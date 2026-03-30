@@ -97,6 +97,7 @@ To develop the Optimized Phishing Website Detector, various technologies and sof
 \item A dynamic, responsive web dashboard was developed using React, Vite, and Tailwind CSS to facilitate total user interaction and analytical transparency.
 \item A custom Chrome Extension was engineered alongside the frontend to render real-time, in-browser alerts for malicious URLs.
 \item All probability distributions, metric configurations, and confusion matrices were initially plotted within Jupyter Notebook.
+\item Interactive, color-coded risk indicators and heuristic breakdowns were implemented to provide users with an intuitive and detailed understanding of detected threats.
 \end{itemize}
 \item \textbf{Deployment}:
 \begin{itemize}
@@ -117,6 +118,21 @@ To develop the Optimized Phishing Website Detector, various technologies and sof
 \section{Dataset Description}
 
 The Phishing Website detection dataset leverages the extensively structured \\ \texttt{PhiUSIIL\_Phishing\_URL\_Dataset} \cite{ref5} and \texttt{dataset\_full.csv}, seamlessly processed into a highly optimized 111-feature continuous numeric vector alongside a dedicated Natural Language Processing (NLP) text tokenization pipeline. To guarantee execution efficiency for the browser Chrome Extension, the backend feature extraction logic was exclusively divided into two architectural processing tiers: \textbf{Layer A (Pure Lexical)} and \textbf{Layer B (Asynchronous Infrastructure)}. This dual-layer architecture guarantees absolute algorithmic precision for the XGBoost and Logistic Regression models while efficiently keeping real-time inference latency under strict, sub-second thresholds.
+
+\subsection{Core Data Sources}
+The training and evaluation of the predictive models utilize a hybridized data approach, combining three high-performance datasets to ensure maximum coverage across lexical patterns and server infrastructure signals.
+
+\begin{itemize}
+    \item \textbf{PhiUSIIL Phishing URL (Website) Dataset} \cite{ref5}:
+    Sourced from the UCI Machine Learning Repository (\url{https://archive.ics.uci.edu/dataset/967/phiusiil+phishing+url+dataset}), this dataset provides 235,795 verified instances (134,850 legitimate and 100,945 phishing). It is critical for its 54 raw features and derived security signals like \texttt{CharContinuationRate} and \texttt{URLTitleMatchScore}, ensuring resilience against modern webpage-based spoofing.
+
+    \item \textbf{Phishing Websites Dataset (111 Features)} \cite{ref23}:
+    Contributed by Arnav Samal via Kaggle (\url{https://www.kaggle.com/datasets/arnavs19/phishing-websites-dataset}), this dataset is the primary source for the system's \textbf{111-dimensional feature matrix}. It comprises 88,647 instances (58,000 legitimate and 30,647 phishing) meticulously mapped into a continuous numeric vector. This dataset provides the granular technical markers (e.g., DNS TTL, SSL handshake statuses) used to train the XGBoost ensemble core.
+
+    \item \textbf{Phishing Site URLs (Large-Scale)} \cite{ref24}:
+    Contributed by Tarun Tiwari via Kaggle (\url{https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls}), this massive repository contains 549,346 entries purely mapping URLs to "Good" or "Bad" labels. Due to its sheer volume and lack of missing values, it serves as the foundational corpus for the \textbf{NLP Logistic Regression} pipeline, enabling the system to learn complex textual tokenization patterns across half a million real-world examples.
+\end{itemize}
+
 
 \subsection{Dataset Overview}
 
@@ -271,7 +287,7 @@ Docker is a powerful containerization platform \cite{ref14} that allows develope
 \item \textbf{Cross-Platform Portability}: Ensured the finalized phishing prediction system could be deployed instantly on any Windows, macOS, or Linux server without relying on manual package installations natively on the host OS.
 \end{itemize}
 
-\subsection*{Conclusion}
+\subsection*{Insights}
 \noindent
 The rigorous integration of FastAPI, standard REST APIs, React, Vite, Tailwind CSS, and Docker orchestrated an immensely capable, end-to-end machine learning web application.
 
@@ -435,7 +451,7 @@ The backend does not merely parse the URL string but actively "probes" the inter
 \noindent
 The primary communication gateway between the Chrome Extension, React Dashboard, and the Python Backend is the \texttt{/api/v1/analyze} endpoint. This endpoint accepts a secure JSON payload containing the target URL and returns a comprehensive risk object including the final decision, confidence score, and detailed feature breakdowns.
 
-\subsection{Conclusion}
+\subsection{Insights}
 \noindent
 Python has unequivocally established itself as the leading technical programming syntax for AI, machine learning architectures, and high-performance asynchronous web routing due to its readability, scalability, and massive operational ecosystem. The definitive selection of Python for this research was fundamentally constrained by its strict ability to:
 
@@ -532,7 +548,7 @@ NLTK is a pioneering platform driving Python programs explicitly analyzing and p
 \item \textbf{Improved Model Precision}: Isolating string behaviors via NLTK allowed the secondary Logistic Regression pipeline to successfully identify complex social engineering vectors that traditional static heuristics fundamentally fail to detect.
 \end{itemize}
 
-\subsection{Conclusion}
+\subsection{Insights}
 \noindent
 The rigorous integration of Python 3.11+ and its massively powerful operational libraries permitted the strictly efficient execution of the core Multi-Model Voting Ensemble architecture designed explicitly for real-time phishing prediction.
 

@@ -4,12 +4,6 @@ SafeSurf is a production-grade, infrastructure-aware Machine Learning system exp
 
 The core of SafeSurf combines a fast deterministic pre-check (DNS Guard) with a robust Multi-Model Voting Classifier Ensemble and Natural Language Processing (NLP). The architecture leverages 111 distinct features spanning lexical structure, domain age, SSL certificate details, and DNS infrastructure information to achieve a highly accurate detection capability ($> 97\%$ accuracy). Users interact with the system via a standalone Visual Security Dashboard and a real-time protective browser extension.
 \section{Use Cases \&  Actors}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{./images/use-case-diagram.png}
-\caption{System Use Case Diagram}
-\label{fig:use_case}
-\end{figure}
 \subsection{Actors}
 \begin{enumerate}
     \item \textbf{End User / Web Surfer:} The primary consumer of the system. They browse the internet and rely on the SafeSurf system to protect them from malicious websites. They interact with the system primarily through the Chrome extension and the web dashboard \cite{ref15}.
@@ -17,6 +11,13 @@ The core of SafeSurf combines a fast deterministic pre-check (DNS Guard) with a 
     \item \textbf{SafeSurf API (System Actor):} The FastAPI backend system that processes incoming requests, orchestrates the layered detection pipeline, interfaces with the ML models, and returns unified JSON risk analysis responses \cite{ref10}.
     \item \textbf{External Infrastructure (System Actors):} Third-party services, including DNS Resolvers, WHOIS registry databases, and SSL authorities. The system queries these actors to accumulate infrastructure footprint data for a given URL.
 \end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{./images/use-case-diagram.png}
+\caption{System Use Case Diagram}
+\label{fig:use_case}
+\end{figure}
 
 \subsection{Core Use Cases}
 \begin{enumerate}
@@ -33,7 +34,7 @@ The core of SafeSurf combines a fast deterministic pre-check (DNS Guard) with a 
     
     \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{./images/chrome-extension.png}
+    \includegraphics[width=0.7\textwidth]{./images/chrome-extension.png}
     \caption{Chrome Extension Real-Time Workflow}
     \label{fig:chrome_extension_flow}
     \end{figure}
@@ -48,7 +49,7 @@ A pre-check algorithm ensuring the URL actually exists. It attempts to resolve t
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\textwidth]{./images/dns.png}
+\includegraphics[width=0.5\textwidth]{./images/dns.png}
 \caption{DNS Guard}
 \label{fig:dns}
 \end{figure}
@@ -66,7 +67,7 @@ A robust ensemble algorithm utilized for scikit-learn compatibility and overall 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.65\textwidth]{./images/multi-model-voting.png}
+\includegraphics[width=0.70\textwidth]{./images/multi-model-voting.png}
 \caption{Multi-Model Voting Classifier Ensemble}
 \label{fig:multi-model}
 \end{figure}
@@ -78,7 +79,7 @@ An algorithm focusing solely on the lexical shape and text strings within the UR
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.2\textwidth]{./images/nlp.png}
+\includegraphics[width=0.3\textwidth]{./images/nlp.png}
 \caption{Natural Language Processing}
 \label{fig:nlp}
 \end{figure}
@@ -91,7 +92,7 @@ $\text{Final Probability} = (0.65 \times \text{XGB\_Ensemble\_Score}) + (0.35 \t
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textwidth]{./images/weighted-soft-voting.png}
+\includegraphics[width=0.5\textwidth]{./images/weighted-soft-voting.png}
 \caption{Weighted Soft-Voting Merger}
 \label{fig:weighted-soft-voting}
 \end{figure}

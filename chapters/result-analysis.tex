@@ -117,5 +117,21 @@ The system successfully mapped complex raw probabilities into discrete, user-fri
     \label{fig:performance-comparison}
 \end{figure}
 
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.5}
+\caption{Comparative Performance Analysis of Evaluated Models}
+\label{tab:performance_comparison}
+\begin{tabularx}{\textwidth}{|p{4.5cm}|X|X|X|X|}
+\hline
+\textbf{Model Architecture} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\ \hline
+Logistic Regression & 86.40\% & 85.10\% & 84.70\% & 84.90\% \\ \hline
+Random Forest & 93.20\% & 92.50\% & 91.80\% & 92.10\% \\ \hline
+XGBoost (Solo) & 95.10\% & 94.80\% & 94.20\% & 94.50\% \\ \hline
+\textbf{SafeSurf Ensemble (Hybrid)} & \textbf{97.35\%} & \textbf{96.80\%} & \textbf{96.50\%} & \textbf{96.65\%} \\ \hline
+\end{tabularx}
+\end{table}
+
 \noindent
 The data shown in Figure \ref{fig:performance-comparison} highlights the strength of the dual-layer detection strategy. While single models perform well on structured data, SafeSurf’s fusion of lexical and infrastructure checks bridges the remaining performance gaps, achieving a superior F1-Score of 96.65\%.
