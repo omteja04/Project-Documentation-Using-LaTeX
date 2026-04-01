@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{setspace}
 \usepackage{titlesec}
-\usepackage{tocloft}
+\usepackage[titles]{tocloft}
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{times}
@@ -56,11 +56,7 @@
 \@ifundefined{listoflistingscaption}{\newcommand{\listoflistingscaption}{LIST OF CODE BLOCKS}}{}
 \renewcommand{\listoflistingscaption}{LIST OF CODE BLOCKS}
 
-% Fix List Titles (Centering + Font Size)
-\patchcmd{\tableofcontents}{\chapter*{\contentsname}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \contentsname}}{}{}
-\patchcmd{\listoffigures}{\chapter*{\listfigurename}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \listfigurename}}{}{}
-\patchcmd{\listoftables}{\chapter*{\listtablename}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \listtablename}}{}{}
-\patchcmd{\listoflistings}{\chapter*{\listoflistingscaption}}{\chapter*{\centering\bfseries\fontsize{16}{18}\selectfont \listoflistingscaption}}{}{}
+% Fix List Titles (Centering handled globally by titlesec numberless chapters)
 \makeatother
 
 
@@ -118,6 +114,11 @@
 \titleformat{\chapter}
 {\centering\bfseries\fontsize{16}{18}\selectfont}
 {\thechapter.}{1em}{\MakeUppercase}
+
+\titleformat{name=\chapter,numberless}
+{\centering\bfseries\fontsize{16}{18}\selectfont}
+{}{0pt}{\MakeUppercase}
+
 \titlespacing*{\chapter}{0pt}{10pt}{20pt}
 
 % ---------------- SECTION FORMAT ----------------
