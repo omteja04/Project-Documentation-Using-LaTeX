@@ -1,0 +1,209 @@
+\chapter{Requirement Analysis}
+
+\section{Functional Requirements}
+
+Functional requirements define the core operations and capabilities of the \textbf{SafeSurf} system. The system accepts input URLs, processes them through a multi-layered machine learning pipeline, and produces phishing detection results. The goal is to ensure accurate, real-time classification with minimal latency while maintaining a simple and user-friendly interface.
+
+\subsection{Core Functional Behavior of SafeSurf}
+
+\subsubsection*{User Interface \& Interaction}
+
+\begin{itemize}
+    \item SafeSurf provides a React.js-based web application that allows users to manually enter and analyze URLs, along with a Chrome extension that continuously monitors URLs in the background during browsing sessions.
+    
+    \item Users are able to input URLs directly through the web dashboard or rely on the Chrome extension to automatically scan URLs without requiring manual intervention.
+    
+    \item The system returns a detailed response that includes the classification result (\textbf{Safe, Phishing, or Invalid Domain}) along with a clearly defined risk level categorized as \textbf{Low, Medium, or High}.
+    
+    \item The user interface is designed to be simple, intuitive, and responsive, ensuring that users can easily understand results without being exposed to internal model complexities or raw probability values.
+\end{itemize}
+
+\subsubsection*{URL Processing Pipeline}
+
+\begin{itemize}
+    \item The system accepts a URL as input and performs normalization steps such as removing unnecessary ports, handling trailing slashes, and ensuring consistent formatting across different inputs.
+    
+    \item Input validation and sanitization mechanisms are applied to detect malformed or potentially harmful inputs before further processing.
+    
+    \item A DNS Guard layer performs domain resolution checks, identifies non-existent domains (NXDOMAIN), and filters out invalid URLs before they reach the machine learning pipeline.
+    
+    \item This preprocessing stage reduces unnecessary computation and improves system efficiency by ensuring that only valid URLs proceed to feature extraction and prediction.
+\end{itemize}
+
+\subsubsection*{Feature Extraction Engine}
+
+\begin{itemize}
+    \item The system extracts a total of 111 features from the input URL, covering lexical characteristics, network-level information, and textual patterns.
+    
+    \item Lexical features include properties such as URL length, structure, number of special characters, and token distribution within the URL.
+    
+    \item Network features include DNS records (A, NS, MX), WHOIS registration details, domain age, and SSL certificate-related information.
+    
+    \item NLP-based features are generated using a Bag-of-Words representation to capture textual patterns within URLs.
+    
+    \item Feature extraction is implemented using asynchronous and parallel processing techniques (such as \texttt{asyncio.gather}) to reduce latency and efficiently handle network-bound operations.
+\end{itemize}
+
+\subsubsection*{Machine Learning Detection Engine}
+
+\begin{itemize}
+    \item The system uses an ensemble of machine learning models including Logistic Regression, Linear Support Vector Machine (LinearSVC), Random Forest, Histogram Gradient Boosting, and a calibrated XGBoost classifier.
+    
+    \item A separate NLP-based Logistic Regression model is used to analyze textual characteristics of URLs independently of infrastructure-based features.
+    
+    \item The outputs from these models are combined using a weighted soft-voting approach, where infrastructure-based predictions contribute 65\% and text-based predictions contribute 35\% to the final result.
+    
+    \item This hybrid approach improves overall prediction accuracy by leveraging both structural and textual characteristics of URLs.
+\end{itemize}
+
+\subsubsection*{Real-Time Detection \& Response}
+
+\begin{itemize}
+    \item The system processes incoming requests in real time using a FastAPI backend that supports asynchronous request handling and efficient concurrency.
+    
+    \item The API returns a structured JSON response containing the classification result, risk level, and additional metadata derived from the prediction pipeline.
+    
+    \item Risk levels are determined using predefined probability thresholds, where values above a certain limit (e.g., 0.85) are categorized as high risk.
+    
+    \item The Chrome extension consumes this response to notify users and prevent access to high-risk websites during browsing.
+\end{itemize}
+
+\subsubsection*{System Maintainability}
+
+\begin{itemize}
+    \item The system follows a modular architecture in which machine learning models, feature extraction components, and API layers are separated for easier updates and maintenance.
+    
+    \item This modular design allows independent updates to models and feature pipelines without affecting the overall system.
+    
+    \item The system supports version control using Git and allows retraining and calibration of models as new data becomes available.
+\end{itemize}
+
+\subsubsection*{Software Requirements}
+
+\begin{itemize}
+    \item \textbf{Frontend:}
+    \begin{itemize}
+        \item React.js for the responsive web interface \cite{ref9}.
+        \item Chrome Extension APIs for background script processing.
+    \end{itemize}
+    
+    \item \textbf{Backend:}
+    \begin{itemize}
+        \item FastAPI (Python 3.9+) for core API architecture and machine learning pipeline integration \cite{ref10}.
+    \end{itemize}
+    
+    \item \textbf{Machine Learning \& Data Processing:}
+    \begin{itemize}
+        \item Scikit-learn (VotingClassifier, NLP Models) \cite{ref11}.
+        \item XGBoost (Infrastructure Intelligence) \cite{ref12, ref13}.
+        \item NumPy and Pandas for data manipulation.
+    \end{itemize}
+    
+    \item \textbf{Deployment:}
+    \begin{itemize}
+        \item Docker for multi-stage containerization \cite{ref14}.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Hardware Requirements}
+
+\begin{itemize}
+    \item \textbf{Minimum Runtime Requirements:}
+    \begin{itemize}
+        \item Processor: Intel i5 / Ryzen 5 or equivalent.
+        \item RAM: 8 GB (16 GB recommended).
+    \end{itemize}
+    \item \textbf{Training Environment Recommended:}
+    \begin{itemize}
+        \item RAM: 16 GB+ for parallel feature extraction across 200k+ dataset rows.
+        \item Storage: SSD with at least 15 GB of free space for datasets and generated CSV files.
+    \end{itemize}
+\end{itemize}
+
+\section{Non-Functional Requirements}
+
+Non-functional requirements define the performance, scalability, security, and reliability characteristics of the SafeSurf system.
+
+\subsection{SafeSurf System Constraints and Quality Attributes}
+
+\subsubsection*{Performance}
+
+\begin{itemize}
+    \item The system is designed to provide responses within an average time of less than 500 milliseconds under normal operating conditions.
+    
+    \item It supports real-time processing of URLs with optimized feature extraction and prediction pipelines.
+    
+    \item External network operations such as DNS and WHOIS queries are controlled using timeout limits (e.g., 15 seconds) to prevent blocking.
+\end{itemize}
+
+\subsubsection*{Scalability}
+
+\begin{itemize}
+    \item The system uses concurrency control mechanisms such as semaphores to efficiently manage multiple simultaneous requests.
+    
+    \item It supports horizontal scaling through containerized deployment and cloud infrastructure.
+    
+    \item Future enhancements include caching mechanisms (e.g., Redis) to improve response time for frequently accessed URLs.
+\end{itemize}
+
+\subsubsection*{Availability}
+
+\begin{itemize}
+    \item The system targets an uptime of approximately 99.8\% and is designed to handle partial failures gracefully.
+    
+    \item Failures from external services such as DNS resolution, WHOIS lookups, or SSL verification are handled without crashing the system.
+    
+    \item The system supports dynamic model reloading (\texttt{/reload-model}) without requiring a full restart, ensuring continuous availability.
+\end{itemize}
+
+\subsubsection*{Security}
+
+\begin{itemize}
+    \item Input validation and sanitization are applied to all incoming URLs to prevent malformed or malicious inputs.
+    
+    \item Request size limits are enforced using middleware (e.g., \texttt{MAX\_REQUEST\_BODY\_BYTES}) to prevent large payload attacks.
+    
+    \item All communication between client and server is secured using HTTPS.
+    
+    \item Cross-Origin Resource Sharing (CORS) policies are configured to restrict access to trusted sources only.
+\end{itemize}
+
+\subsubsection*{Reliability}
+
+\begin{itemize}
+    \item The system maintains a prediction accuracy greater than 97\% based on trained models.
+    
+    \item It ensures consistent outputs across different datasets and input variations.
+    
+    \item The system is designed to remain stable under varying workloads and concurrent usage conditions.
+\end{itemize}
+
+\subsubsection*{Usability}
+
+\begin{itemize}
+    \item The interface is designed to be easy to understand and accessible to non-technical users.
+    
+    \item Results are presented in a clear and concise format without exposing internal technical details.
+    
+    \item The Chrome extension operates automatically, requiring minimal user interaction.
+\end{itemize}
+
+\subsubsection*{Maintainability}
+
+\begin{itemize}
+    \item The system follows a clean and modular code structure separating API routes, feature extraction logic, and model inference.
+    
+    \item Configuration settings are managed using environment variables (\texttt{.env}) for flexibility.
+    
+    \item Logging and monitoring mechanisms can be integrated to track system performance and errors.
+\end{itemize}
+
+\subsubsection*{Deployment \& Supportability}
+
+\begin{itemize}
+    \item The application is containerized using Docker for consistent deployment across environments.
+    
+    \item It is compatible with cloud platforms and supports scaling based on demand.
+    
+    \item The system is designed to integrate with CI/CD pipelines for automated deployment and updates.
+\end{itemize}

@@ -1,0 +1,219 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+% ---------------- PACKAGES ----------------
+\usepackage[left=40mm,right=20mm,top=30mm,bottom=30mm]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{indentfirst}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{cite}
+\usepackage{tabularx}
+\usepackage{placeins}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.geometric}
+
+% ---------------- TOC ----------------
+% ---------------- LISTS FORMATTING ----------------
+\renewcommand{\contentsname}{Index}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
+\renewcommand{\cftdotsep}{10000}
+
+% ---------------- COLORS ----------------
+\definecolor{namegreen}{RGB}{0,150,0}
+\definecolor{supervisororange}{RGB}{230,120,0}
+\definecolor{titleblue}{RGB}{0,0,150}
+\definecolor{textblue}{RGB}{0,0,100}
+
+% ---------------- CODE LISTINGS ----------------
+\usepackage[newfloat]{minted}
+\usepackage{newfloat}
+\usepackage{caption}
+\usepackage{textcase}
+\usepackage{etoolbox}
+
+% Define listing float properly
+\SetupFloatingEnvironment{listing}{
+    fileext=lol,
+    listname={List of Code Blocks},
+    name={Code Block}
+}
+
+% Ensure the list titles are consistently formatted
+\makeatletter
+\@ifundefined{listoflistingscaption}{\newcommand{\listoflistingscaption}{LIST OF CODE BLOCKS}}{}
+\renewcommand{\listoflistingscaption}{LIST OF CODE BLOCKS}
+
+% Fix List Titles (Centering handled globally by titlesec numberless chapters)
+\makeatother
+
+
+% Caption styling
+\captionsetup{
+    font={small,stretch=1},
+    labelfont=bf
+}
+
+\captionsetup[listing]{
+    font={small,stretch=1},
+    labelfont=bf
+}
+
+% ---------------- HYPERLINK SETTINGS ----------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black
+}
+
+% ---------------- MINTED SETTINGS ----------------
+\usemintedstyle{friendly}
+\definecolor{codebg}{RGB}{245,245,245}
+
+\setminted{
+    breaklines,
+    frame=single,
+    fontsize=\small,
+    tabsize=2,
+    bgcolor=codebg
+}
+
+% ---------------- FORMATTING ----------------
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+
+\setcounter{secnumdepth}{4}   % allow deeper levels
+\setcounter{tocdepth}{4}
+
+% ---------------- PAGE STYLE ----------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% ---------------- CHAPTER FORMAT ----------------
+\titleformat{\chapter}
+{\centering\bfseries\fontsize{16}{18}\selectfont}
+{\thechapter.}{1em}{\MakeUppercase}
+
+\titleformat{name=\chapter,numberless}
+{\centering\bfseries\fontsize{16}{18}\selectfont}
+{}{0pt}{\MakeUppercase}
+
+\titlespacing*{\chapter}{0pt}{10pt}{20pt}
+
+% ---------------- SECTION FORMAT ----------------
+\titleformat{\section}
+{\bfseries\fontsize{14}{16}\selectfont}
+{\thesection}{1em}{}
+
+% ---------------- SUBSECTION ----------------
+\titleformat{\subsection}
+{\bfseries\fontsize{12}{14}\selectfont}
+{\thesubsection}{1em}{}
+
+% ---------------- SUBSUBSECTION ----------------
+\titleformat{\subsubsection}
+{\bfseries\fontsize{12}{14}\selectfont}
+{\thesubsubsection}{1em}{}
+
+% ---------------- SUBSUBSUBSECTION ----------------
+\titleformat{\paragraph}
+{\bfseries\fontsize{12}{14}\selectfont}
+{\theparagraph}{1em}{}
+
+\titlespacing*{\paragraph}{0pt}{6pt}{6pt}
+
+% Numbered (if needed)
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}}
+
+% Unnumbered (NO TOC)
+\newcommand{\subsubsubsectionstar}[1]{\paragraph*{#1}}
+
+% ---------------- NUMBERING ----------------
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+\numberwithin{listing}{chapter}
+
+% ==================================================
+\begin{document}
+
+% ---------------- FRONT MATTER ----------------
+\pagenumbering{roman}
+\pagestyle{fancy}
+
+\input{initial_pages/title}
+\clearpage
+\setcounter{page}{2}
+
+\input{initial_pages/certificate}
+\clearpage
+
+\input{initial_pages/declaration}
+\clearpage
+
+\input{initial_pages/acknowledgement}
+\clearpage
+
+\input{initial_pages/pictures}
+\clearpage
+
+% Abstract should be single spaced
+\begin{singlespace}
+\input{initial_pages/abstract}
+\end{singlespace}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+\listoffigures
+\clearpage
+
+\listoftables
+\clearpage
+
+\listoflistings
+\clearpage
+
+% ---------------- MAIN CONTENT ----------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{chapters/introduction}
+\input{chapters/requirement-analysis}
+\input{chapters/system-analysis}
+\input{chapters/system-design}
+\input{chapters/implementation}
+\input{chapters/testing}
+\input{chapters/result-analysis}
+\input{chapters/conclusion}
+\input{chapters/future-scope}
+
+% References single spaced
+\begin{singlespace}
+\input{chapters/bibliography}
+\end{singlespace}
+
+\input{chapters/annexure}
+
+\end{document}

@@ -1,0 +1,45 @@
+# LaTeX auxiliary files
+*.aux
+*.toc
+*.lof
+*.lot
+*.out
+*.lol
+*.log
+*.pyg
+*.bbl
+*.blg
+*.bc[0-9]*
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdfsync
+*.alg
+*.acr
+*.acn
+*.gls
+*.glo
+*.ist
+*.alg
+*.glg
+*.slg
+*.slo
+*.sls
+*.sta
+*.tdo
+*.xdy
+*.run.xml
+
+# Python/Minted
+_minted-*
+pygments-listings.sty
+
+# PDF (ignore by default if you prefer)
+main.pdf
+
+# Folders to ignore
+.vscode/
+.idea/
+.DS_Store
+
+_minted

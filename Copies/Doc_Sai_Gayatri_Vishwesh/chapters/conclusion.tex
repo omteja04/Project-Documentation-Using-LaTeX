@@ -1,0 +1,13 @@
+\chapter{Conclusion}
+
+The SafeSurf project presents a comprehensive solution for real-time phishing website detection using a hybrid machine learning approach \cite{ref1}. The system is designed with a multi-layered architecture that combines structured feature analysis, natural language processing, and efficient backend integration to deliver accurate and reliable predictions.
+
+A key strength of SafeSurf lies in its ensemble-based methodology. Instead of relying on a single model, the system integrates multiple machine learning algorithms such as Logistic Regression, Support Vector Machine, Random Forest, HistGradientBoosting, and XGBoost within a VotingClassifier framework. This is further enhanced by an NLP-based Logistic Regression model that analyzes lexical patterns using Bag-of-Words representation. This combination improves generalization, reduces false predictions, and enhances the detection of both simple and sophisticated phishing attacks.
+
+The system architecture is optimized for real-time performance. The DNS Guard layer acts as an initial filter, instantly blocking invalid or non-existent domains and reducing unnecessary computation. In addition, asynchronous feature extraction enables efficient processing of 111 features, including lexical, network, and textual attributes, ensuring a balance between accuracy and response time. Threshold-based decision logic further improves classification reliability.
+
+The system also focuses on usability and real-world applicability. A React-based web interface and a Chrome extension allow users to analyze URLs seamlessly during browsing. The output is simplified to display clear results such as \textit{Safe} or \textit{Phishing Risk}, ensuring accessibility for non-technical users while maintaining system effectiveness.
+
+Throughout development, the system demonstrated stable performance across different types of URLs. The combination of ensemble learning and feature engineering contributed to improved robustness and adaptability to evolving phishing techniques.
+
+Overall, SafeSurf provides a scalable, efficient, and intelligent framework for phishing detection. The integration of machine learning models, system-level optimizations, and user-centric design makes it a strong foundation for future enhancements such as cloud deployment, continuous model updates, and advanced threat detection mechanisms.
